@@ -5,18 +5,37 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Maksim Alekseev — Motion designer & 3D/VFX artist</title>
 <meta name="description" content="Motion designer and 3D/VFX artist based in Kraków. Media facades, product films, explainers and trailers.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maksim Alekseev">
+<meta property="og:url" content="https://my-portfolio.maksim-alekseev-1995.workers.dev/">
 <meta property="og:title" content="Maksim Alekseev — Motion designer & 3D/VFX artist">
 <meta property="og:description" content="Media facades, product films, explainers and trailers. Kraków & remote.">
-<meta property="og:image" content="assets/c01b.webp">
+<meta property="og:image" content="https://my-portfolio.maksim-alekseev-1995.workers.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MA monogram — Maksim Alekseev, motion designer and 3D/VFX artist">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maksim Alekseev — Motion designer & 3D/VFX artist">
+<meta name="twitter:description" content="Media facades, product films, explainers and trailers. Kraków & remote.">
+<meta name="twitter:image" content="https://my-portfolio.maksim-alekseev-1995.workers.dev/og.png">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#ECEAE4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Big+Shoulders+Display:wght@600..900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400..700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Big+Shoulders+Display:wght@600..900&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter+Tight:wght@400..700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
 <style>
 /* ---------- tokens ---------- */
 :root{--e:cubic-bezier(.22,1,.36,1);--d1:.15s;--d2:.25s;--d3:.45s;--tb:44px;--sat:0px;--sab:0px;--pad:clamp(16px,3.4vw,56px);--fm:'JetBrains Mono',ui-monospace,monospace}
 :root{--tb:0px}
-html.dB{--bg:#ECEAE4;--bg2:#DEDAD1;--fg:#141414;--mut:rgba(20,20,20,.56);--line:rgba(20,20,20,.15);--acc:#FF4A1C;--accfg:#fff;--fd:'Inter Tight',system-ui,sans-serif;--fb:'Inter Tight',system-ui,sans-serif;--fs:'Instrument Serif',Georgia,serif}
+html.dB{--bg:#ECEAE4;--bg2:#DEDAD1;--fg:#141414;--mut:rgba(20,20,20,.56);--line:rgba(20,20,20,.15);--acc:#FF4A1C;--accfg:#fff;--fd:'Inter Tight',system-ui,sans-serif;--fb:'Inter Tight',system-ui,sans-serif;--fs:'Instrument Serif','Cormorant Garamond',Georgia,serif}
 
 /* ---------- base ---------- */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -320,6 +339,38 @@ ul,ol{list-style:none}
 @media (hover:hover){.b-pn a:hover b{color:var(--acc)}}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.grain{animation:none}}
+
+/* language switch */
+.b-lang{position:relative}
+.b-lang-b{height:44px;min-width:44px;padding:0 8px 0 12px;display:inline-flex;align-items:center;justify-content:center;gap:3px;border-radius:22px;font:500 12px/1 var(--fm);letter-spacing:.06em;transition:background var(--d2)}
+.b-lang-b .ic{width:14px;height:14px;opacity:.6;transition:transform var(--d3) var(--e)}
+.b-lang.open .b-lang-b{background:var(--bg2)}
+.b-lang.open .b-lang-b .ic{transform:rotate(180deg)}
+.b-lang-m{position:absolute;right:0;top:calc(100% + 8px);min-width:196px;margin:0;padding:6px;list-style:none;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 48px -24px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translate3d(0,-8px,0) scale(.97);transform-origin:top right;transition:opacity var(--d2),transform var(--d3) var(--e),visibility 0s linear var(--d3)}
+.b-lang.open .b-lang-m{opacity:1;visibility:visible;transform:none;transition:opacity var(--d2),transform var(--d3) var(--e),visibility 0s}
+.b-lang-m li{opacity:0;transform:translate3d(0,-4px,0);transition:opacity var(--d2),transform var(--d3) var(--e)}
+.b-lang.open .b-lang-m li{opacity:1;transform:none}
+.b-lang.open .b-lang-m li:nth-child(2){transition-delay:30ms}.b-lang.open .b-lang-m li:nth-child(3){transition-delay:60ms}.b-lang.open .b-lang-m li:nth-child(4){transition-delay:90ms}
+.b-lang-m button{width:100%;min-height:44px;display:grid;grid-template-columns:30px 1fr 8px;align-items:center;gap:8px;padding:0 12px;border-radius:10px;font:400 14px/1.2 var(--fb);text-align:left;transition:background var(--d1)}
+.b-lang-m button span:first-child{font:500 12px/1 var(--fm);letter-spacing:.06em}
+.b-lang-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);opacity:0;transform:scale(.4);transition:opacity var(--d2),transform var(--d3) var(--e)}
+.b-lang-m button[aria-selected=true] .b-lang-dot{opacity:1;transform:none}
+.b-lang-m button:focus-visible{outline:2px solid var(--acc);outline-offset:-2px}
+@media (hover:hover){.b-lang-b:hover{background:var(--bg2)}.b-lang-m button:hover{background:var(--bg2)}}
+.b-lang+.hd-menu{margin-left:0}
+@media (max-width:759px){.b-lang-b{padding:0 6px 0 10px}}
+/* player timeline: hover ghost, knob, time tip */
+.x-pl-tr{position:relative;--r:0;--h:0}
+.x-pl-tr i{height:4px;background:rgba(255,255,255,.34);box-shadow:0 0 0 .5px rgba(0,0,0,.25);transition:height .2s var(--e)}
+.x-pl-tr b{transform:scaleX(var(--r))}
+.x-pl-tr u{position:absolute;inset:0;background:rgba(255,255,255,.42);transform-origin:left;transform:scaleX(var(--h));opacity:0;transition:opacity var(--d2)}
+.x-pl-k{position:absolute;top:50%;left:calc(var(--r)*100%);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.35);transform:scale(0);transition:transform .2s var(--e);pointer-events:none}
+.x-pl-tip{position:absolute;bottom:36px;left:clamp(20px,calc(var(--h)*100%),calc(100% - 20px));padding:5px 8px;border-radius:7px;background:rgba(14,14,14,.86);color:#fff;font-size:11px;line-height:1;white-space:nowrap;pointer-events:none;opacity:0;transform:translate3d(-50%,4px,0);transition:opacity var(--d1),transform var(--d2) var(--e)}
+.x-pl-tr.drag i,.x-pl-tr:focus-visible i{height:7px}
+.x-pl-tr.drag u{opacity:1}
+.x-pl-tr.drag .x-pl-k,.x-pl-tr:focus-visible .x-pl-k{transform:scale(1)}
+.x-pl-tr.drag .x-pl-tip{opacity:1;transform:translate3d(-50%,0,0)}
+@media (hover:hover){.x-pl-tr:hover i{height:7px}.x-pl-tr:hover u{opacity:1}.x-pl-tr:hover .x-pl-k{transform:scale(1)}.x-pl-tr:hover .x-pl-tip{opacity:1;transform:translate3d(-50%,0,0)}}
 </style>
 </head>
 <body>
@@ -347,87 +398,213 @@ const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const pad=n=>String(n).padStart(2,'0');
 
+/* ---------- i18n ---------- */
+const LANGS=[{k:'en',l:'EN',n:'English'},{k:'pl',l:'PL',n:'Polski'},{k:'uk',l:'UA',n:'Українська'},{k:'ru',l:'RU',n:'Русский'}];
+const D={
+en:{name:'Maksim Alekseev',title:'Maksim Alekseev — Motion designer & 3D/VFX artist',desc:'Motion designer and 3D/VFX artist based in Kraków. Media facades, product films, explainers and trailers.',
+ 'nav.home':'Home','nav.works':'Works','nav.about':'About','nav.contact':'Contact',menu:'Menu',close:'Close',city:'Kraków',lang:'Language',
+ 'theme.dark':'Switch to dark theme','theme.light':'Switch to light theme',
+ 'hero.avail':'Available for new projects · Kraków &amp; remote',
+ 'hero.intro':'Motion designer and 3D/VFX artist — <em class="b-serif">from the first sketch to the final render.</em>',
+ 'hero.sub':'4+ years · 5 studios · 100+ projects. Media facades, product films, explainers and trailers.',
+ 'hero.cta':'View works',reel:'Showreel','reel.cap':'Showreel 2026 · cut from the works below',
+ 'sec.sel':'(01) Selected work','h.sel':'Things I’ve|<em class="b-serif">made move</em>','all':'All works','case':'View case',
+ 'sec.svc':'(02) Services','h.svc':'What I <em class="b-serif">do</em>',
+ 'sec.about':'(03) About','h.about':'Every frame is|<em class="b-serif">built on purpose.</em>',toolkit:'Toolkit',
+ 'sec.exp':'(04) Experience','h.exp':'Where I’ve <em class="b-serif">worked</em>',
+ 'sec.faq':'(05) FAQ','h.faq':'Any <em class="b-serif">questions?</em>',
+ 'sec.ct':'(06) Contact','h.ct':'Let’s get|<em class="b-serif">in touch.</em>','ct.p':'Open to full-time roles in Kraków and remote projects worldwide.',
+ cv:'Download CV','cv.t':'This would download the CV as a PDF.',copied:'Address copied: ',
+ 'f.avail':'Available for new projects',top:'Back to top ↑',
+ 'w.kick':'Index · 2021 — 2026',list:'List',grid:'Grid','f.aria':'Filter works','l.aria':'Layout',
+ 'e.t':'No works published yet','e.p':'New cases are on the way. Meanwhile, the showreel is ready to watch.','e.reel':'Watch showreel','e.touch':'Get in touch',
+ yt:'Watch the award on YouTube','m.event':'Event','m.studio':'Studio','m.role':'Role','m.year':'Year','m.format':'Format','m.dur':'Duration','m.tools':'Tools',
+ brief:'Brief',sol:'Solution',res:'Result',did:'What I did',did2:'Scene, light and animation in {a}, finished in {b}.',did1:'Modelling, light, animation and render in {a}.',
+ prev:'← Previous',next:'Next →',more:'More work',
+ 'pl.play':'Play video','pl.pp':'Play or pause','pl.seek':'Seek','pl.mute':'Mute or unmute','pl.fs':'Full screen','pl.err':'The video didn’t load.','pl.retry':'Retry',
+ frame:'Open frame {n}','lb.close':'Close','lb.prev':'Previous frame','lb.next':'Next frame',
+ 'cur.view':'View','cur.play':'Play',now:'now',yr:'yr',mo:'mos',
+ months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']},
+pl:{name:'Maksim Alekseev',title:'Maksim Alekseev — motion designer i artysta 3D/VFX',desc:'Motion designer i artysta 3D/VFX z Krakowa. Fasady medialne, filmy produktowe, explainery i trailery.',
+ 'nav.home':'Start','nav.works':'Prace','nav.about':'O mnie','nav.contact':'Kontakt',menu:'Menu',close:'Zamknij',city:'Kraków',lang:'Język',
+ 'theme.dark':'Włącz ciemny motyw','theme.light':'Włącz jasny motyw',
+ 'hero.avail':'Dostępny do nowych projektów · Kraków i zdalnie',
+ 'hero.intro':'Motion designer i artysta 3D/VFX — <em class="b-serif">od pierwszego szkicu do finalnego renderu.</em>',
+ 'hero.sub':'4+ lata · 5 studiów · 100+ projektów. Fasady medialne, filmy produktowe, explainery i trailery.',
+ 'hero.cta':'Zobacz prace',reel:'Showreel','reel.cap':'Showreel 2026 · montaż z prac poniżej',
+ 'sec.sel':'(01) Wybrane prace','h.sel':'Rzeczy, które|<em class="b-serif">wprawiłem w ruch</em>','all':'Wszystkie prace','case':'Zobacz projekt',
+ 'sec.svc':'(02) Usługi','h.svc':'Czym się <em class="b-serif">zajmuję</em>',
+ 'sec.about':'(03) O mnie','h.about':'Każda klatka|<em class="b-serif">ma swój cel.</em>',toolkit:'Narzędzia',
+ 'sec.exp':'(04) Doświadczenie','h.exp':'Gdzie <em class="b-serif">pracowałem</em>',
+ 'sec.faq':'(05) FAQ','h.faq':'Masz <em class="b-serif">pytania?</em>',
+ 'sec.ct':'(06) Kontakt','h.ct':'Bądźmy|<em class="b-serif">w kontakcie.</em>','ct.p':'Otwarty na pracę na etacie w Krakowie i zdalne projekty z całego świata.',
+ cv:'Pobierz CV','cv.t':'Tutaj pobierze się CV w PDF.',copied:'Skopiowano adres: ',
+ 'f.avail':'Dostępny do nowych projektów',top:'Do góry ↑',
+ 'w.kick':'Indeks · 2021 — 2026',list:'Lista',grid:'Siatka','f.aria':'Filtruj prace','l.aria':'Układ',
+ 'e.t':'Brak opublikowanych prac','e.p':'Nowe projekty są w drodze. W międzyczasie możesz obejrzeć showreel.','e.reel':'Obejrzyj showreel','e.touch':'Napisz do mnie',
+ yt:'Zobacz nagrodę na YouTube','m.event':'Wydarzenie','m.studio':'Studio','m.role':'Rola','m.year':'Rok','m.format':'Format','m.dur':'Czas trwania','m.tools':'Narzędzia',
+ brief:'Brief',sol:'Rozwiązanie',res:'Rezultat',did:'Co zrobiłem',did2:'Scena, światło i animacja w {a}, wykończenie w {b}.',did1:'Modelowanie, światło, animacja i render w {a}.',
+ prev:'← Poprzedni',next:'Następny →',more:'Więcej prac',
+ 'pl.play':'Odtwórz wideo','pl.pp':'Odtwórz lub wstrzymaj','pl.seek':'Przewiń','pl.mute':'Wycisz lub włącz dźwięk','pl.fs':'Pełny ekran','pl.err':'Nie udało się załadować wideo.','pl.retry':'Spróbuj ponownie',
+ frame:'Otwórz klatkę {n}','lb.close':'Zamknij','lb.prev':'Poprzednia klatka','lb.next':'Następna klatka',
+ 'cur.view':'Zobacz','cur.play':'Odtwórz',now:'obecnie',yr:'rok',mo:'mies.',
+ months:['sty','lut','mar','kwi','maj','cze','lip','sie','wrz','paź','lis','gru']},
+uk:{name:'Максим Алєксєєв',title:'Максим Алєксєєв — моушн-дизайнер і 3D/VFX-артист',desc:'Моушн-дизайнер і 3D/VFX-артист у Кракові. Медіафасади, продуктові ролики, пояснювальні відео та трейлери.',
+ 'nav.home':'Головна','nav.works':'Роботи','nav.about':'Про мене','nav.contact':'Контакти',menu:'Меню',close:'Закрити',city:'Краків',lang:'Мова',
+ 'theme.dark':'Увімкнути темну тему','theme.light':'Увімкнути світлу тему',
+ 'hero.avail':'Відкритий до нових проєктів · Краків і віддалено',
+ 'hero.intro':'Моушн-дизайнер і 3D/VFX-артист — <em class="b-serif">від першого ескізу до фінального рендеру.</em>',
+ 'hero.sub':'4+ роки · 5 студій · 100+ проєктів. Медіафасади, продуктові ролики, пояснювальні відео та трейлери.',
+ 'hero.cta':'Дивитися роботи',reel:'Шоурил','reel.cap':'Шоурил 2026 · змонтовано з робіт нижче',
+ 'sec.sel':'(01) Вибрані роботи','h.sel':'Те, що я|<em class="b-serif">змусив рухатися</em>','all':'Усі роботи','case':'Дивитися кейс',
+ 'sec.svc':'(02) Послуги','h.svc':'Що я <em class="b-serif">роблю</em>',
+ 'sec.about':'(03) Про мене','h.about':'Кожен кадр|<em class="b-serif">має свою мету.</em>',toolkit:'Інструменти',
+ 'sec.exp':'(04) Досвід','h.exp':'Де я <em class="b-serif">працював</em>',
+ 'sec.faq':'(05) Питання','h.faq':'Є <em class="b-serif">питання?</em>',
+ 'sec.ct':'(06) Контакти','h.ct':'Давайте|<em class="b-serif">зв’яжемося.</em>','ct.p':'Відкритий до повної зайнятості в Кракові та віддалених проєктів по всьому світу.',
+ cv:'Завантажити CV','cv.t':'Тут завантажиться CV у форматі PDF.',copied:'Адресу скопійовано: ',
+ 'f.avail':'Відкритий до нових проєктів',top:'Нагору ↑',
+ 'w.kick':'Індекс · 2021 — 2026',list:'Список',grid:'Сітка','f.aria':'Фільтр робіт','l.aria':'Вигляд',
+ 'e.t':'Робіт поки немає','e.p':'Нові кейси вже на підході. А поки можна подивитися шоурил.','e.reel':'Дивитися шоурил','e.touch':'Написати мені',
+ yt:'Нагорода на YouTube','m.event':'Подія','m.studio':'Студія','m.role':'Роль','m.year':'Рік','m.format':'Формат','m.dur':'Тривалість','m.tools':'Інструменти',
+ brief:'Бриф',sol:'Рішення',res:'Результат',did:'Що я зробив',did2:'Сцена, світло й анімація в {a}, фіналізація в {b}.',did1:'Моделювання, світло, анімація та рендер у {a}.',
+ prev:'← Попередній',next:'Наступний →',more:'Інші роботи',
+ 'pl.play':'Відтворити відео','pl.pp':'Відтворити або пауза','pl.seek':'Перемотування','pl.mute':'Вимкнути або увімкнути звук','pl.fs':'На весь екран','pl.err':'Відео не завантажилося.','pl.retry':'Повторити',
+ frame:'Відкрити кадр {n}','lb.close':'Закрити','lb.prev':'Попередній кадр','lb.next':'Наступний кадр',
+ 'cur.view':'Дивитись','cur.play':'Дивитись',now:'зараз',yr:'р.',mo:'міс.',
+ months:['січ','лют','бер','кві','тра','чер','лип','сер','вер','жов','лис','гру']},
+ru:{name:'Максим Алексеев',title:'Максим Алексеев — моушн-дизайнер и 3D/VFX-артист',desc:'Моушн-дизайнер и 3D/VFX-артист в Кракове. Медиафасады, продуктовые ролики, объясняющие видео и трейлеры.',
+ 'nav.home':'Главная','nav.works':'Работы','nav.about':'Обо мне','nav.contact':'Контакты',menu:'Меню',close:'Закрыть',city:'Краков',lang:'Язык',
+ 'theme.dark':'Включить тёмную тему','theme.light':'Включить светлую тему',
+ 'hero.avail':'Открыт для новых проектов · Краков и удалённо',
+ 'hero.intro':'Моушн-дизайнер и 3D/VFX-артист — <em class="b-serif">от первого эскиза до финального рендера.</em>',
+ 'hero.sub':'4+ года · 5 студий · 100+ проектов. Медиафасады, продуктовые ролики, объясняющие видео и трейлеры.',
+ 'hero.cta':'Смотреть работы',reel:'Шоурил','reel.cap':'Шоурил 2026 · смонтирован из работ ниже',
+ 'sec.sel':'(01) Избранные работы','h.sel':'То, что я|<em class="b-serif">заставил двигаться</em>','all':'Все работы','case':'Смотреть кейс',
+ 'sec.svc':'(02) Услуги','h.svc':'Что я <em class="b-serif">делаю</em>',
+ 'sec.about':'(03) Обо мне','h.about':'Каждый кадр|<em class="b-serif">создан с целью.</em>',toolkit:'Инструменты',
+ 'sec.exp':'(04) Опыт','h.exp':'Где я <em class="b-serif">работал</em>',
+ 'sec.faq':'(05) Вопросы','h.faq':'Есть <em class="b-serif">вопросы?</em>',
+ 'sec.ct':'(06) Контакты','h.ct':'Давайте|<em class="b-serif">свяжемся.</em>','ct.p':'Открыт к работе в штате в Кракове и удалённым проектам по всему миру.',
+ cv:'Скачать CV','cv.t':'Здесь скачается CV в формате PDF.',copied:'Адрес скопирован: ',
+ 'f.avail':'Открыт для новых проектов',top:'Наверх ↑',
+ 'w.kick':'Индекс · 2021 — 2026',list:'Список',grid:'Сетка','f.aria':'Фильтр работ','l.aria':'Вид',
+ 'e.t':'Работ пока нет','e.p':'Новые кейсы уже на подходе. А пока можно посмотреть шоурил.','e.reel':'Смотреть шоурил','e.touch':'Написать мне',
+ yt:'Награда на YouTube','m.event':'Событие','m.studio':'Студия','m.role':'Роль','m.year':'Год','m.format':'Формат','m.dur':'Длительность','m.tools':'Инструменты',
+ brief:'Бриф',sol:'Решение',res:'Результат',did:'Что я сделал',did2:'Сцена, свет и анимация в {a}, финализация в {b}.',did1:'Моделирование, свет, анимация и рендер в {a}.',
+ prev:'← Предыдущий',next:'Следующий →',more:'Другие работы',
+ 'pl.play':'Воспроизвести видео','pl.pp':'Воспроизвести или пауза','pl.seek':'Перемотка','pl.mute':'Выключить или включить звук','pl.fs':'На весь экран','pl.err':'Видео не загрузилось.','pl.retry':'Повторить',
+ frame:'Открыть кадр {n}','lb.close':'Закрыть','lb.prev':'Предыдущий кадр','lb.next':'Следующий кадр',
+ 'cur.view':'Смотреть','cur.play':'Смотреть',now:'сейчас',yr:'г.',mo:'мес.',
+ months:['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек']}
+};
+function pickLang(){let s=null;try{s=localStorage.getItem('pf-lang')}catch(_){}if(s&&D[s])return s;for(const l of (navigator.languages||[navigator.language||'en'])){const b=String(l).toLowerCase().split('-')[0];if(b==='uk'||b==='ua')return 'uk';if(D[b])return b;if(b==='be')return 'ru'}return 'en'}
+let LANG=pickLang();
+const t=(k,o)=>{let v=(D[LANG]&&D[LANG][k]!==undefined)?D[LANG][k]:D.en[k];if(o)for(const x in o)v=String(v).replace('{'+x+'}',o[x]);return v};
+const tr=x=>x&&typeof x==='object'&&!Array.isArray(x)?(x[LANG]!==undefined?x[LANG]:x.en):x;
+const langLabel=()=>LANGS.find(l=>l.k===LANG).l;
+
 /* ---------- data ---------- */
+const YT='https://www.youtube.com/watch?v=tiGiuTHSjR8';
+const ROLE3D={en:'3D artist',pl:'Artysta 3D',uk:'3D-артист',ru:'3D-артист'};
+const AWARD={en:'1st place · UART Media Fest',pl:'1. miejsce · UART Media Fest',uk:'1 місце · UART Media Fest',ru:'1 место · UART Media Fest'};
+const S_SCREEN={en:'Wide-format screen ad',pl:'Reklama na ekran panoramiczny',uk:'Реклама для широкоформатного екрана',ru:'Реклама для широкоформатного экрана'};
 const WORKS=[
- {id:'stor-lumy',n:'01',t:'Stor & Lumy',tl:'Stor &|Lumy',s:'Media facade content',cat:'media',ev:'UART Media Fest',studio:'Lumenstory',role:'3D artist',year:'2023',tools:['Blender','Cinema 4D'],award:'1st place · UART Media Fest',proof:'https://www.youtube.com/watch?v=tiGiuTHSjR8',cover:'01b',
-  v:[{c:'01a',l:'On the facade',d:'2:19',r:'1280×720',ar:'16/9'},{c:'01b',l:'Clean render',d:'1:48',r:'3840×2160',ar:'16/9'}],
-  ov:'Content for a large media facade, made with the Lumenstory studio for UART Media Fest. The piece took 1st place at the festival.',
-  brief:'Tell a short character story that reads from the street on a large, angled media facade.',
-  sol:'Characters, set, materials and light built in Blender and Cinema 4D, then staged for the facade’s geometry so the scene feels three-dimensional from the viewer’s spot.',
-  res:'1st place at UART Media Fest.'},
- {id:'superia',n:'02',t:'SUPERIA',tl:'Superia',s:'Mobile game trailer',cat:'gs',tools:['Seedance 2.0','After Effects'],cover:'02',
+ {id:'stor-lumy',n:'01',t:'Stor & Lumy',tl:'Stor &|Lumy',cat:'media',ev:'UART Media Fest',studio:'Lumenstory',role:ROLE3D,year:'2023',tools:['Blender','Cinema 4D'],award:AWARD,proof:YT,cover:'01b',
+  s:{en:'Media facade content',pl:'Treści na fasadę medialną',uk:'Контент для медіафасаду',ru:'Контент для медиафасада'},
+  v:[{c:'01b',l:{en:'Clean render',pl:'Czysty render',uk:'Чистий рендер',ru:'Чистый рендер'},d:'1:48',r:'3840×2160',ar:'16/9'},{c:'01a',l:{en:'On the facade',pl:'Na fasadzie',uk:'На фасаді',ru:'На фасаде'},d:'2:19',r:'1280×720',ar:'16/9'}],
+  ov:{en:'Content for a large media facade, made with the Lumenstory studio for UART Media Fest. The piece took 1st place at the festival.',pl:'Treści na dużą fasadę medialną, przygotowane ze studiem Lumenstory na UART Media Fest. Projekt zajął 1. miejsce na festiwalu.',uk:'Контент для великого медіафасаду, створений зі студією Lumenstory для UART Media Fest. Робота посіла 1 місце на фестивалі.',ru:'Контент для большого медиафасада, созданный со студией Lumenstory для UART Media Fest. Работа заняла 1 место на фестивале.'},
+  brief:{en:'Tell a short character story that reads from the street on a large, angled media facade.',pl:'Opowiedzieć krótką historię postaci, czytelną z ulicy na dużej, kątowej fasadzie medialnej.',uk:'Розповісти коротку історію персонажа, яку добре видно з вулиці на великому кутовому медіафасаді.',ru:'Рассказать короткую историю персонажа, которая хорошо читается с улицы на большом угловом медиафасаде.'},
+  sol:{en:'Characters, set, materials and light built in Blender and Cinema 4D, then staged for the facade’s geometry so the scene feels three-dimensional from the viewer’s spot.',pl:'Postacie, scenografia, materiały i światło zbudowane w Blenderze i Cinema 4D, a potem ustawione pod geometrię fasady, aby scena wydawała się trójwymiarowa z miejsca widza.',uk:'Персонажі, сет, матеріали й світло зроблені в Blender і Cinema 4D та вибудувані під геометрію фасаду, щоб сцена здавалася тривимірною з точки глядача.',ru:'Персонажи, сет, материалы и свет сделаны в Blender и Cinema 4D и выстроены под геометрию фасада, чтобы сцена казалась трёхмерной с точки зрителя.'},
+  res:{en:'1st place at UART Media Fest.',pl:'1. miejsce na UART Media Fest.',uk:'1 місце на UART Media Fest.',ru:'1 место на UART Media Fest.'}},
+ {id:'superia',n:'02',t:'SUPERIA',tl:'Superia',cat:'gs',tools:['Seedance 2.0','After Effects'],cover:'02',
+  s:{en:'Mobile game trailer',pl:'Trailer gry mobilnej',uk:'Трейлер мобільної гри',ru:'Трейлер мобильной игры'},
   v:[{c:'02',d:'1:49',r:'2560×1440',ar:'16/9'}],
-  ov:'Trailer for the mobile game SUPERIA.',
-  brief:'Introduce the world and characters of SUPERIA in under two minutes.',
-  sol:'Shots generated in Seedance 2.0, then cut, timed and finished with titles and effects in After Effects.'},
- {id:'cgi-promo',n:'03',t:'CGI social promo',tl:'CGI social|promo',s:'Vertical CGI ad',cat:'gs',tools:['Blender','After Effects'],cover:'03',
+  ov:{en:'Trailer for the mobile game SUPERIA.',pl:'Trailer gry mobilnej SUPERIA.',uk:'Трейлер мобільної гри SUPERIA.',ru:'Трейлер мобильной игры SUPERIA.'},
+  brief:{en:'Introduce the world and characters of SUPERIA in under two minutes.',pl:'Przedstawić świat i postacie SUPERIA w mniej niż dwie minuty.',uk:'Представити світ і персонажів SUPERIA менш ніж за дві хвилини.',ru:'Представить мир и персонажей SUPERIA меньше чем за две минуты.'},
+  sol:{en:'Shots generated in Seedance 2.0, then cut, timed and finished with titles and effects in After Effects.',pl:'Ujęcia wygenerowane w Seedance 2.0, następnie zmontowane, zgrane w czasie i wykończone napisami i efektami w After Effects.',uk:'Кадри згенеровані в Seedance 2.0, потім змонтовані, зведені за таймінгом і доведені титрами та ефектами в After Effects.',ru:'Кадры сгенерированы в Seedance 2.0, затем смонтированы, сведены по таймингу и доведены титрами и эффектами в After Effects.'}},
+ {id:'cgi-promo',n:'03',t:{en:'CGI social promo',pl:'Promo CGI do social mediów',uk:'CGI-промо для соцмереж',ru:'CGI-промо для соцсетей'},tl:{en:'CGI social|promo',pl:'Promo CGI|do social mediów',uk:'CGI-промо|для соцмереж',ru:'CGI-промо|для соцсетей'},cat:'gs',tools:['Blender','After Effects'],cover:'03',
+  s:{en:'Vertical CGI ad',pl:'Pionowa reklama CGI',uk:'Вертикальна CGI-реклама',ru:'Вертикальная CGI-реклама'},
   v:[{c:'03',d:'0:32',r:'1080×1920',ar:'9/16'}],
-  ov:'CGI promo for social media: a product scene, lighting and type animation combined in one frame.'},
- {id:'skincare',n:'04',t:'Skincare visualisation',tl:'Skincare|visual',s:'Cosmetic product film',cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'04',
+  ov:{en:'CGI promo for social media: a product scene, lighting and type animation combined in one frame.',pl:'Promo CGI do social mediów: scena produktowa, oświetlenie i animacja tekstu w jednym kadrze.',uk:'CGI-промо для соцмереж: продуктова сцена, освітлення й текстова анімація в одному кадрі.',ru:'CGI-промо для соцсетей: продуктовая сцена, освещение и текстовая анимация в одном кадре.'}},
+ {id:'skincare',n:'04',t:{en:'Skincare visualisation',pl:'Wizualizacja kosmetyku',uk:'Візуалізація догляду за шкірою',ru:'Визуализация ухода за кожей'},tl:{en:'Skincare|visual',pl:'Wizualizacja|kosmetyku',uk:'Візуалізація|для шкіри',ru:'Визуализация|для кожи'},cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'04',
+  s:{en:'Cosmetic product film',pl:'Film o kosmetyku',uk:'Ролик про косметику',ru:'Ролик о косметике'},
   v:[{c:'04',d:'0:50',r:'1280×720',ar:'16/9'}],
-  ov:'Product visualisation for a cosmetics brand: skin, textures and microscopic-level detail.'},
- {id:'cross-section',n:'05',t:'Tissue cross-section',tl:'Tissue|section',s:'Medical explainer shot',cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'05',
+  ov:{en:'Product visualisation for a cosmetics brand: skin, textures and microscopic-level detail.',pl:'Wizualizacja produktu dla marki kosmetycznej: skóra, tekstury i detale na poziomie mikroskopowym.',uk:'Продуктова візуалізація для косметичного бренду: шкіра, текстури й деталізація на мікроскопічному рівні.',ru:'Продуктовая визуализация для косметического бренда: кожа, текстуры и детализация на микроскопическом уровне.'}},
+ {id:'cross-section',n:'05',t:{en:'Tissue cross-section',pl:'Przekrój tkanki',uk:'Переріз тканини',ru:'Срез ткани'},tl:{en:'Tissue|section',pl:'Przekrój|tkanki',uk:'Переріз|тканини',ru:'Срез|ткани'},cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'05',
+  s:{en:'Medical explainer shot',pl:'Medyczny explainer',uk:'Медичний ролик-пояснення',ru:'Медицинский ролик-объяснение'},
   v:[{c:'05',d:'0:13',r:'1920×1080',ar:'16/9'}],
-  ov:'Medical and cosmetic 3D visualisation: an animated cross-section of tissue for an explainer video.'},
- {id:'elevai',n:'06',t:'Elevai',tl:'Elevai',s:'Skincare science film',cat:'beauty',tools:['Cinema 4D'],cover:'06',
+  ov:{en:'Medical and cosmetic 3D visualisation: an animated cross-section of tissue for an explainer video.',pl:'Medyczna i kosmetyczna wizualizacja 3D: animowany przekrój tkanki do filmu objaśniającego.',uk:'Медична та косметична 3D-візуалізація: анімований переріз тканини для пояснювального ролика.',ru:'Медицинская и косметическая 3D-визуализация: анимированный срез ткани для объясняющего ролика.'}},
+ {id:'elevai',n:'06',t:'Elevai',tl:'Elevai',cat:'beauty',tools:['Cinema 4D'],cover:'06',
+  s:{en:'Skincare science film',pl:'Naukowy film o pielęgnacji',uk:'Науковий ролик про догляд за шкірою',ru:'Научный ролик об уходе за кожей'},
   v:[{c:'06',d:'2:54',r:'1920×1080',ar:'16/9'}],
-  ov:'Product film for the skincare brand Elevai, built and rendered in Cinema 4D.'},
- {id:'cryptolyte',n:'07',t:'Cryptolyte',tl:'Crypto|lyte',s:'Product explainer',cat:'product',tools:['Cinema 4D'],cover:'07',
+  ov:{en:'Product film for the skincare brand Elevai, built and rendered in Cinema 4D.',pl:'Film produktowy dla marki kosmetycznej Elevai, zbudowany i wyrenderowany w Cinema 4D.',uk:'Продуктовий ролик для косметичного бренду Elevai, створений і відрендерений у Cinema 4D.',ru:'Продуктовый ролик для косметического бренда Elevai, созданный и отрендеренный в Cinema 4D.'}},
+ {id:'cryptolyte',n:'07',t:'Cryptolyte',tl:'Crypto|lyte',cat:'product',tools:['Cinema 4D'],cover:'07',
+  s:{en:'Product explainer',pl:'Explainer produktowy',uk:'Продуктовий ролик-пояснення',ru:'Продуктовый ролик-объяснение'},
   v:[{c:'07',d:'1:56',r:'1920×1080',ar:'16/9'}],
-  ov:'Explainer film for the Cryptolyte pool water treatment system, built and rendered in Cinema 4D.'},
- {id:'center-door',n:'08',t:'Center door',tl:'Center|door',s:'Vertical display content',cat:'media',tools:['Cinema 4D'],cover:'08',
+  ov:{en:'Explainer film for the Cryptolyte pool water treatment system, built and rendered in Cinema 4D.',pl:'Film objaśniający system uzdatniania wody basenowej Cryptolyte, zbudowany i wyrenderowany w Cinema 4D.',uk:'Пояснювальний ролик про систему очищення води в басейні Cryptolyte, створений і відрендерений у Cinema 4D.',ru:'Объясняющий ролик о системе очистки воды в бассейне Cryptolyte, созданный и отрендеренный в Cinema 4D.'}},
+ {id:'center-door',n:'08',t:'Center door',tl:'Center|door',cat:'media',tools:['Cinema 4D'],cover:'08',
+  s:{en:'Vertical display content',pl:'Treści na pionowy ekran',uk:'Контент для вертикального екрана',ru:'Контент для вертикального экрана'},
   v:[{c:'08',d:'1:03',r:'208×416',ar:'1/2'}],
-  ov:'Content for a narrow vertical display, built and rendered in Cinema 4D.'},
- {id:'n1-screen',n:'09',t:'N1 screen',tl:'N1|screen',s:'Wide-format screen ad',cat:'media',tools:['Cinema 4D'],cover:'09',
+  ov:{en:'Content for a narrow vertical display, built and rendered in Cinema 4D.',pl:'Treści na wąski pionowy ekran, zbudowane i wyrenderowane w Cinema 4D.',uk:'Контент для вузького вертикального екрана, створений і відрендерений у Cinema 4D.',ru:'Контент для узкого вертикального экрана, созданный и отрендеренный в Cinema 4D.'}},
+ {id:'n1-screen',n:'09',t:'N1 screen',tl:'N1|screen',cat:'media',tools:['Cinema 4D'],cover:'09',s:S_SCREEN,
   v:[{c:'09',d:'0:15',r:'1920×1080',ar:'16/9'}],
-  ov:'Short animated ad for a wide-format screen, built and rendered in Cinema 4D.'},
- {id:'amarula',n:'10',t:'Amarula',tl:'Amarula',s:'Wide-format screen ad',cat:'media',tools:['Cinema 4D','After Effects'],cover:'10',
+  ov:{en:'Short animated ad for a wide-format screen, built and rendered in Cinema 4D.',pl:'Krótka animowana reklama na ekran panoramiczny, zbudowana i wyrenderowana w Cinema 4D.',uk:'Коротка анімована реклама для широкоформатного екрана, створена й відрендерена в Cinema 4D.',ru:'Короткая анимированная реклама для широкоформатного экрана, созданная и отрендеренная в Cinema 4D.'}},
+ {id:'amarula',n:'10',t:'Amarula',tl:'Amarula',cat:'media',tools:['Cinema 4D','After Effects'],cover:'10',s:S_SCREEN,
   v:[{c:'10',d:'0:15',r:'3840×2160',ar:'16/9'}],
-  ov:'Animated ad for the Amarula liqueur on a long, narrow screen: the bottle, marula fruit and the brand end card, built in Cinema 4D and finished in After Effects.'},
- {id:'vb-health',n:'11',t:'VB Health',tl:'VB|Health',s:'Product visualisation',cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'11',
+  ov:{en:'Animated ad for the Amarula liqueur on a long, narrow screen: the bottle, marula fruit and the brand end card, built in Cinema 4D and finished in After Effects.',pl:'Animowana reklama likieru Amarula na długi, wąski ekran: butelka, owoce maruli i plansza końcowa marki, zbudowana w Cinema 4D i wykończona w After Effects.',uk:'Анімована реклама лікеру Amarula для довгого вузького екрана: пляшка, плоди марули й фінальна заставка бренду, створена в Cinema 4D і доведена в After Effects.',ru:'Анимированная реклама ликёра Amarula для длинного узкого экрана: бутылка, плоды марулы и финальная заставка бренда, созданная в Cinema 4D и доведённая в After Effects.'}},
+ {id:'vb-health',n:'11',t:'VB Health',tl:'VB|Health',cat:'beauty',tools:['Cinema 4D','After Effects'],cover:'11',
+  s:{en:'Product visualisation',pl:'Wizualizacja produktu',uk:'Продуктова візуалізація',ru:'Продуктовая визуализация'},
   v:[{c:'11',d:'0:22',r:'1920×1080',ar:'16/9'}],
-  ov:'Product film for a VB Health training suit, showing the garment on the body and revealing the muscles it works under the fabric.'}
+  ov:{en:'Product film for a VB Health training suit, showing the garment on the body and revealing the muscles it works under the fabric.',pl:'Film produktowy dla stroju treningowego VB Health: strój na ciele i mięśnie, które pracują pod materiałem.',uk:'Продуктовий ролик для тренувального костюма VB Health: костюм на тілі та м’язи, які він задіює, під тканиною.',ru:'Продуктовый ролик для тренировочного костюма VB Health: костюм на теле и мышцы, которые он задействует, под тканью.'}}
 ];
-const FILTERS=[{k:'all',l:'All'},{k:'media',l:'Media & screens'},{k:'beauty',l:'Beauty & science'},{k:'gs',l:'Game & social'},{k:'product',l:'Product'}];
+const FILTERS=[{k:'all',l:{en:'All',pl:'Wszystkie',uk:'Усі',ru:'Все'}},{k:'media',l:{en:'Media & screens',pl:'Media i ekrany',uk:'Медіа та екрани',ru:'Медиа и экраны'}},{k:'beauty',l:{en:'Beauty & science',pl:'Beauty i nauka',uk:'Б’юті та наука',ru:'Бьюти и наука'}},{k:'gs',l:{en:'Game & social',pl:'Gry i social',uk:'Ігри та соцмережі',ru:'Игры и соцсети'}},{k:'product',l:{en:'Product',pl:'Produkt',uk:'Продукт',ru:'Продукт'}}];
 const SVC=[
- {n:'01',t:'3D & VFX',d:'Building a scene from draft to final frame — form, material, light and atmosphere.',b:['Modelling & texturing','Lighting','Environment design','Particles & anamorphic effects'],w:'stor-lumy'},
- {n:'02',t:'Animation',d:'Motion that holds attention — from characters to type on screen.',b:['Character rigging','Motion design','2D / 3D type animation','Short films'],w:'superia'},
- {n:'03',t:'Video production',d:'Editing and post-production that bring 3D and live footage into one film.',b:['Editing & post-production','2D / 3D promo videos','Commercials','Adobe Premiere Pro'],w:'cgi-promo'},
- {n:'04',t:'Real-time & corporate',d:'Interactive visualisation and graphics that follow the brand identity.',b:['Unreal Engine 5','Interactive visualisation','2D graphics','Corporate identity'],w:'cryptolyte'}
+ {n:'01',t:'3D & VFX',d:{en:'Building a scene from draft to final frame — form, material, light and atmosphere.',pl:'Budowa sceny od szkicu do finalnej klatki — forma, materiał, światło i atmosfera.',uk:'Побудова сцени від чернетки до фінального кадру — форма, матеріал, світло й атмосфера.',ru:'Построение сцены от черновика до финального кадра — форма, материал, свет и атмосфера.'},
+  b:[{en:'Modelling & texturing',pl:'Modelowanie i teksturowanie',uk:'Моделювання та текстурування',ru:'Моделирование и текстурирование'},{en:'Lighting',pl:'Oświetlenie',uk:'Освітлення',ru:'Освещение'},{en:'Environment design',pl:'Projektowanie otoczenia',uk:'Дизайн оточення',ru:'Дизайн окружения'},{en:'Particles & anamorphic effects',pl:'Cząsteczki i efekty anamorficzne',uk:'Частинки та анаморфні ефекти',ru:'Частицы и анаморфные эффекты'}]},
+ {n:'02',t:{en:'Animation',pl:'Animacja',uk:'Анімація',ru:'Анимация'},d:{en:'Motion that holds attention — from characters to type on screen.',pl:'Ruch, który przyciąga uwagę — od postaci po typografię w kadrze.',uk:'Рух, який тримає увагу, — від персонажа до тексту в кадрі.',ru:'Движение, которое держит внимание, — от персонажа до текста в кадре.'},
+  b:[{en:'Character rigging',pl:'Rigging postaci',uk:'Ригінг персонажів',ru:'Риггинг персонажей'},{en:'Motion design',pl:'Motion design',uk:'Моушн-дизайн',ru:'Моушн-дизайн'},{en:'2D / 3D type animation',pl:'Animacja tekstu 2D / 3D',uk:'2D / 3D анімація тексту',ru:'2D / 3D анимация текста'},{en:'Short films',pl:'Filmy krótkometrażowe',uk:'Короткометражні фільми',ru:'Короткометражные фильмы'}]},
+ {n:'03',t:{en:'Video production',pl:'Produkcja wideo',uk:'Відеовиробництво',ru:'Видеопроизводство'},d:{en:'Editing and post-production that bring 3D and live footage into one film.',pl:'Montaż i postprodukcja, które łączą 3D i materiał live w jeden film.',uk:'Монтаж і постпродакшн, які збирають 3D та живе відео в один ролик.',ru:'Монтаж и постпродакшн, которые собирают 3D и живое видео в один ролик.'},
+  b:[{en:'Editing & post-production',pl:'Montaż i postprodukcja',uk:'Монтаж і постпродакшн',ru:'Монтаж и постпродакшн'},{en:'2D / 3D promo videos',pl:'Filmy promocyjne 2D / 3D',uk:'2D / 3D промо-ролики',ru:'2D / 3D промо-ролики'},{en:'Commercials',pl:'Reklamy',uk:'Рекламні ролики',ru:'Рекламные ролики'},'Adobe Premiere Pro']},
+ {n:'04',t:{en:'Real-time & corporate',pl:'Real-time i identyfikacja',uk:'Real-time і фірмовий стиль',ru:'Real-time и фирменный стиль'},d:{en:'Interactive visualisation and graphics that follow the brand identity.',pl:'Interaktywne wizualizacje i grafika zgodna z identyfikacją marki.',uk:'Інтерактивна візуалізація та графіка з дотриманням фірмового стилю.',ru:'Интерактивная визуализация и графика с соблюдением фирменного стиля.'},
+  b:['Unreal Engine 5',{en:'Interactive visualisation',pl:'Interaktywna wizualizacja',uk:'Інтерактивна візуалізація',ru:'Интерактивная визуализация'},{en:'2D graphics',pl:'Grafika 2D',uk:'2D-графіка',ru:'2D-графика'},{en:'Corporate identity',pl:'Identyfikacja wizualna',uk:'Фірмовий стиль',ru:'Фирменный стиль'}]}
 ];
-const STATS=[{n:4,s:'+',l:'years in 3D & VFX'},{n:5,s:'',l:'studios'},{n:100,s:'+',l:'projects'},{n:1,s:'st',l:'place · UART Media Fest',h:'https://www.youtube.com/watch?v=tiGiuTHSjR8'}];
-const TOOLS=[{g:'3D & real-time',i:['Cinema 4D','Redshift','V-Ray','Blender','Cycles','Unreal Engine 5','Twinmotion','Unity','Marvelous Designer','Substance 3D Painter']},{g:'2D, compositing & video',i:['After Effects','Premiere Pro','Photoshop','Illustrator','Figma']}];
+const STATS=[
+ {n:4,s:'+',l:{en:'years in 3D & VFX',pl:'lata w 3D i VFX',uk:'роки в 3D та VFX',ru:'года в 3D и VFX'}},
+ {n:5,s:'',l:{en:'studios',pl:'studiów',uk:'студій',ru:'студий'}},
+ {n:100,s:'+',l:{en:'projects',pl:'projektów',uk:'проєктів',ru:'проектов'}},
+ {n:1,s:{en:'st',pl:'.',uk:'',ru:''},l:{en:'place · UART Media Fest',pl:'miejsce · UART Media Fest',uk:'місце · UART Media Fest',ru:'место · UART Media Fest'},h:YT}];
+const TOOLS=[{g:{en:'3D & real-time',pl:'3D i real-time',uk:'3D та real-time',ru:'3D и real-time'},i:['Cinema 4D','Redshift','V-Ray','Blender','Cycles','Unreal Engine 5','Twinmotion','Unity','Marvelous Designer','Substance 3D Painter']},{g:{en:'2D, compositing & video',pl:'2D, compositing i wideo',uk:'2D, композитинг і відео',ru:'2D, композитинг и видео'},i:['After Effects','Premiere Pro','Photoshop','Illustrator','Figma']}];
 const EXP=[
- {p:'Feb 2025 — now',c:'Planetarium Noosphere',r:'Motion designer / VFX artist',d:'1 yr 8 mos',s:[2025,1],e:[2026,9],now:1},
- {p:'Aug 2024 — Feb 2025',c:'Nova LLC',r:'VFX artist',d:'6 mos',s:[2024,7],e:[2025,1]},
- {p:'Feb 2024 — Jul 2024',c:'Clandai',r:'VFX artist',d:'6 mos',s:[2024,1],e:[2024,6]},
- {p:'Jan 2023 — Jan 2024',c:'Lumenstory',r:'3D artist',d:'1 yr',s:[2023,0],e:[2024,0]},
- {p:'2021 — 2022',c:'Freelance',r:'3D modeller, graphic designer',d:'1 yr',s:[2021,0],e:[2022,11]}
-];
-const PROC=[
- {n:'01',t:'Brief & references',d:'Goal, format, deadline and a reference board.'},
- {n:'02',t:'Styleframes',d:'Key frames that lock the look before animation starts.'},
- {n:'03',t:'Animation & simulation',d:'Blocking first, then motion, particles and cloth.'},
- {n:'04',t:'Render & compositing',d:'Redshift, Cycles or Unreal, finished in After Effects.'},
- {n:'05',t:'Delivery',d:'Every cut and aspect ratio the placement needs.'}
+ {c:'Planetarium Noosphere',r:{en:'Motion designer / VFX artist',pl:'Motion designer / artysta VFX',uk:'Моушн-дизайнер / VFX-артист',ru:'Моушн-дизайнер / VFX-артист'},m:20,s:[2025,1],now:1},
+ {c:'Nova LLC',r:{en:'VFX artist',pl:'Artysta VFX',uk:'VFX-артист',ru:'VFX-артист'},m:6,s:[2024,7],e:[2025,1]},
+ {c:'Clandai',r:{en:'VFX artist',pl:'Artysta VFX',uk:'VFX-артист',ru:'VFX-артист'},m:6,s:[2024,1],e:[2024,6]},
+ {c:'Lumenstory',r:ROLE3D,m:12,s:[2023,0],e:[2024,0]},
+ {c:{en:'Freelance',pl:'Freelance',uk:'Фриланс',ru:'Фриланс'},r:{en:'3D modeller, graphic designer',pl:'Modelarz 3D, grafik',uk:'3D-моделер, графічний дизайнер',ru:'3D-моделлер, графический дизайнер'},m:12,s:[2021,0],e:[2022,11],yo:1}
 ];
 const FAQ=[
- {q:'What kind of work do you take on?',a:'Full-time roles and project work in 3D, motion design and VFX: product films, media facades, explainers, social ads and trailers.'},
- {q:'Where are you based?',a:'Kraków, Poland. Open to on-site and hybrid roles in Kraków and to remote work anywhere.'},
- {q:'Which formats can you deliver?',a:'Horizontal, vertical and non-standard screens — from 9:16 social cuts to 4K facade content and narrow signage like 208×416.'},
- {q:'Can you work within existing brand guidelines?',a:'Yes. Corporate identity work is part of the job: colours, type and motion rules carry into every frame.'},
- {q:'How do we start?',a:'Send a short brief or a reference on Telegram or by email: what it is for, the format, the deadline and where it will be shown.'}
+ {q:{en:'What kind of work do you take on?',pl:'Jakie projekty realizujesz?',uk:'Яку роботу ви берете?',ru:'Какую работу вы берёте?'},a:{en:'Full-time roles and project work in 3D, motion design and VFX: product films, media facades, explainers, social ads and trailers.',pl:'Etat i projekty w 3D, motion designie i VFX: filmy produktowe, fasady medialne, explainery, reklamy do social mediów i trailery.',uk:'Повна зайнятість і проєктна робота в 3D, моушн-дизайні та VFX: продуктові ролики, медіафасади, пояснювальні відео, реклама для соцмереж і трейлери.',ru:'Работа в штате и проектная работа в 3D, моушн-дизайне и VFX: продуктовые ролики, медиафасады, объясняющие видео, реклама для соцсетей и трейлеры.'}},
+ {q:{en:'Where are you based?',pl:'Gdzie pracujesz?',uk:'Де ви знаходитеся?',ru:'Где вы находитесь?'},a:{en:'Kraków, Poland. Open to on-site and hybrid roles in Kraków and to remote work anywhere.',pl:'Kraków, Polska. Jestem otwarty na pracę stacjonarną i hybrydową w Krakowie oraz zdalną z dowolnego miejsca.',uk:'Краків, Польща. Відкритий до роботи в офісі чи гібридно в Кракові та до віддаленої роботи звідусіль.',ru:'Краков, Польша. Открыт к работе в офисе или гибридно в Кракове и к удалённой работе откуда угодно.'}},
+ {q:{en:'Which formats can you deliver?',pl:'Jakie formaty przygotowujesz?',uk:'Які формати ви робите?',ru:'Какие форматы вы делаете?'},a:{en:'Horizontal, vertical and non-standard screens — from 9:16 social cuts to 4K facade content and narrow signage like 208×416.',pl:'Poziome, pionowe i niestandardowe ekrany — od pionowych wersji 9:16 do social mediów po treści 4K na fasady i wąskie ekrany jak 208×416.',uk:'Горизонтальні, вертикальні та нестандартні екрани — від вертикальних нарізок 9:16 для соцмереж до 4K-контенту для фасадів і вузьких екранів на кшталт 208×416.',ru:'Горизонтальные, вертикальные и нестандартные экраны — от вертикальных нарезок 9:16 для соцсетей до 4K-контента для фасадов и узких экранов вроде 208×416.'}},
+ {q:{en:'Can you work within existing brand guidelines?',pl:'Czy pracujesz z istniejącym brandbookiem?',uk:'Чи працюєте ви з наявним брендбуком?',ru:'Работаете ли вы с готовым брендбуком?'},a:{en:'Yes. Corporate identity work is part of the job: colours, type and motion rules carry into every frame.',pl:'Tak. Praca z identyfikacją wizualną to część zawodu: kolory, typografia i zasady ruchu przechodzą do każdej klatki.',uk:'Так. Робота з фірмовим стилем — частина професії: кольори, шрифти й правила руху переходять у кожен кадр.',ru:'Да. Работа с фирменным стилем — часть профессии: цвета, шрифты и правила движения переносятся в каждый кадр.'}},
+ {q:{en:'How do we start?',pl:'Jak zacząć współpracę?',uk:'Як почати співпрацю?',ru:'Как начать работу?'},a:{en:'Send a short brief or a reference on Telegram or by email: what it is for, the format, the deadline and where it will be shown.',pl:'Wyślij krótki brief lub referencję na Telegramie albo mailem: do czego to jest, format, termin i gdzie będzie wyświetlane.',uk:'Надішліть короткий бриф або референс у Telegram чи на пошту: для чого це, формат, дедлайн і де показуватиметься.',ru:'Пришлите короткий бриф или референс в Telegram или на почту: для чего это, формат, дедлайн и где будет показываться.'}}
 ];
 const CONTACTS=[
  {l:'Telegram',v:'@maxim_1861',h:'https://t.me/maxim_1861'},
  {l:'LinkedIn',v:'maksim-alekseev',h:'https://www.linkedin.com/in/maksim-alekseev-217439224'},
- {l:'Email',v:'maksim.alekseev.1995@gmail.com',h:'mailto:maksim.alekseev.1995@gmail.com'},
- {l:'Archive',v:'Full album',h:'https://photos.app.goo.gl/AzCmdVsj8y4BygJv7'}
+ {l:{en:'Email',pl:'E-mail',uk:'Пошта',ru:'Почта'},v:'maksim.alekseev.1995@gmail.com',h:'mailto:maksim.alekseev.1995@gmail.com'},
+ {l:{en:'Archive',pl:'Archiwum',uk:'Архів',ru:'Архив'},v:{en:'Full album',pl:'Pełny album',uk:'Повний альбом',ru:'Полный альбом'},h:'https://photos.app.goo.gl/AzCmdVsj8y4BygJv7'}
 ];
-const ABOUT='Hi, I’m Maksim — a motion designer and 3D/VFX artist. For more than four years I’ve been turning brand ideas into spectacular frames, from the first scene sketch to the final render. Modelling, light, particles, animation and editing: everything a film needs to look expensive and work for the result.';
+const ABOUT={en:'Hi, I’m Maksim — a motion designer and 3D/VFX artist. For more than four years I’ve been turning brand ideas into spectacular frames, from the first scene sketch to the final render. Modelling, light, particles, animation and editing: everything a film needs to look expensive and work for the result.',
+ pl:'Cześć, jestem Maksim — motion designer i artysta 3D/VFX. Od ponad czterech lat zamieniam pomysły marek w efektowne kadry, od pierwszego szkicu sceny po finalny render. Modelowanie, światło, cząsteczki, animacja i montaż: wszystko, czego film potrzebuje, by wyglądać drogo i działać na wynik.',
+ uk:'Вітаю, я Максим — моушн-дизайнер і 3D/VFX-артист. Понад чотири роки перетворюю ідеї брендів на видовищну картинку — від першого ескізу сцени до фінального рендеру. Моделювання, світло, частинки, анімація та монтаж — усе, що потрібно, щоб ролик виглядав дорого й працював на результат.',
+ ru:'Привет, я Максим — моушн-дизайнер и 3D/VFX-артист. Больше четырёх лет превращаю идеи брендов в зрелищную картинку — от первого эскиза сцены до финального рендера. Моделирование, свет, частицы, анимация и монтаж — всё, что нужно, чтобы ролик выглядел дорого и работал на результат.'};
 const W=id=>WORKS.find(w=>w.id===id);
 /* videos with full-quality WebM masters, posters and frames */
 const HQ=new Set(['01b','02','03','04','05','06','07','08','09','10','11']);
+const mon=([y,m])=>`${t('months')[m]} ${y}`;
+const period=e=>e.yo?`${e.s[0]} — ${e.e[0]}`:`${mon(e.s)} — ${e.now?t('now'):mon(e.e)}`;
+const dur=m=>{const y=Math.floor(m/12),r=m%12;return [y?`${y} ${t('yr')}`:'',r?`${r} ${t('mo')}`:''].filter(Boolean).join(' ')};
 
 /* ---------- icons ---------- */
 const sv=(d,f)=>`<svg class="ic" viewBox="0 0 24 24" ${f?'fill="currentColor"':'fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"'} aria-hidden="true">${d}</svg>`;
@@ -449,58 +626,69 @@ const nxt=w=>WORKS[(WORKS.indexOf(w)+1)%WORKS.length],prv=w=>WORKS[(WORKS.indexO
 const curV=w=>w.v[Math.min(S.vi,w.v.length-1)];
 const href=(v,id)=>v==='home'?'#/':`#/${v}${id?'/'+id:''}`;
 
+
+const EXTRA={en:{'cur.reel':'Play reel','reel.play':'Play showreel','reel.po':'Showreel poster','lb.frames':'Frames',fr:'frame',po:'poster'},
+ pl:{'cur.reel':'Odtwórz','reel.play':'Odtwórz showreel','reel.po':'Okładka showreelu','lb.frames':'Klatki',fr:'klatka',po:'okładka'},
+ uk:{'cur.reel':'Дивитись','reel.play':'Дивитися шоурил','reel.po':'Обкладинка шоурилу','lb.frames':'Кадри',fr:'кадр',po:'постер'},
+ ru:{'cur.reel':'Смотреть','reel.play':'Смотреть шоурил','reel.po':'Обложка шоурила','lb.frames':'Кадры',fr:'кадр',po:'постер'}};
+for(const k in EXTRA)Object.assign(D[k],EXTRA[k]);
+
 /* ---------- partials ---------- */
 const L=(t,dl=0)=>t.split('|').map((x,i)=>`<span class="ln"><span style="--i:${i};--dl:${dl}ms">${x}</span></span>`).join('');
 const words=t=>t.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
-function M(w,ctx,o={}){const c=o.code||w.cover;return `<div class="x-m"${o.ar===false?'':` style="aspect-ratio:${o.ar||cardAr(w)}"`}><div class="x-mi"${o.par?` data-par="${o.par}"`:''}><img src="assets/c${c}.webp" alt="${esc(w.t)}" loading="lazy" decoding="async"><video ${o.auto?`data-auto="p${c}"`:`data-p="${c}"`} data-keep="${ctx}-${c}" muted loop playsinline preload="none" aria-hidden="true"></video></div></div>`}
+const wt=w=>tr(w.t);
+function M(w,ctx,o={}){const c=o.code||w.cover;return `<div class="x-m"${o.ar===false?'':` style="aspect-ratio:${o.ar||cardAr(w)}"`}><div class="x-mi"${o.par?` data-par="${o.par}"`:''}><img src="assets/c${c}.webp" alt="${esc(wt(w))}" loading="lazy" decoding="async"><video ${o.auto?`data-auto="p${c}"`:`data-p="${c}"`} data-keep="${ctx}-${c}" muted loop playsinline preload="none" aria-hidden="true"></video></div></div>`}
 const AMB=(base,poster)=>`<div class="x-amb"><img src="assets/${poster}.webp" alt="" decoding="async"><video data-auto="${base}" data-keep="amb-${base}" muted loop playsinline preload="none" aria-hidden="true"></video></div>`;
-function PL(w,ctx){const v=curV(w);return `<div class="x-pl${v.ar!=='16/9'?' vert':''}" style="--ar:${v.ar}" data-keep="${ctx}-pl-${v.c}" data-src="assets/v${v.c}.mp4"${HQ.has(v.c)?` data-webm="assets/w${v.c}.webm"`:''}>
-<img class="x-pl-po" src="assets/${HQ.has(v.c)?'h':'c'}${v.c}.webp" alt="${esc(w.t)} — poster">
+/* one player template for case videos and the showreel */
+function plHTML(o){return `<div class="x-pl${o.vert?' vert':''}" id="${o.id}" style="--ar:${o.ar}" data-keep="${o.id}" data-src="${o.src}"${o.webm?` data-webm="${o.webm}"`:''} data-d="${o.d}">
+<img class="x-pl-po" src="${o.poster}" alt="${esc(o.alt)}">
 <video class="x-pl-v" playsinline preload="none"></video>
-<button class="x-pl-big" data-a="pl-toggle" aria-label="Play video" data-cursor="Play">${I.play}</button>
-<div class="x-pl-bar"><button class="x-ib" data-a="pl-toggle" aria-label="Play or pause"><span class="i-pl">${I.play}</span><span class="i-pa">${I.pause}</span></button><div class="x-pl-tr" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i><b></b></i></div><span class="x-pl-t mono">0:00 / ${v.d}</span><button class="x-ib" data-a="pl-mute" aria-label="Mute or unmute"><span class="i-v">${I.vol}</span><span class="i-m">${I.mute}</span></button><button class="x-ib" data-a="pl-fs" aria-label="Full screen">${I.fs}</button></div>
+<button class="x-pl-big" data-a="pl-toggle" aria-label="${o.big}"${o.cursor?` data-cursor="${o.cursor}"`:''}>${I.play}</button>
+<div class="x-pl-bar"><button class="x-ib" data-a="pl-toggle" aria-label="${t('pl.pp')}"><span class="i-pl">${I.play}</span><span class="i-pa">${I.pause}</span></button><div class="x-pl-tr" role="slider" aria-label="${t('pl.seek')}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i><u></u><b></b></i><em class="x-pl-k"></em><span class="x-pl-tip mono">0:00</span></div><span class="x-pl-t mono">0:00 / ${o.d}</span>${o.mute?`<button class="x-ib" data-a="pl-mute" aria-label="${t('pl.mute')}"><span class="i-v">${I.vol}</span><span class="i-m">${I.mute}</span></button>`:''}<button class="x-ib" data-a="pl-fs" aria-label="${t('pl.fs')}">${I.fs}</button></div>
 <div class="x-pl-load"><i></i></div>
-<div class="x-pl-err"><p>The video didn’t load.</p><button class="x-btn-s" data-a="pl-retry">Retry</button></div></div>`}
-const TABS=w=>w.v.length<2?'':`<div class="x-tabs" role="tablist">${w.v.map((v,i)=>`<button role="tab" aria-selected="${i===S.vi}" class="${i===S.vi?'on':''}" data-a="tab" data-v="${i}">${v.l}<span class="mono">${v.d}</span></button>`).join('')}</div>`;
-const meta=w=>[['Event',w.ev],['Studio',w.studio],['Role',w.role],['Year',w.year],['Format',w.v.map(v=>v.r).join(' / ')],['Duration',w.v.map(v=>v.d).join(' / ')],['Tools',w.tools.join(', ')]].filter(x=>x[1]);
-const txt=w=>w.brief?[['Brief',w.brief],['Solution',w.sol]].concat(w.res?[['Result',w.res]]:[]):[['What I did',w.tools.length>1?`Scene, light and animation in ${w.tools[0]}, finished in ${w.tools[1]}.`:`Modelling, light, animation and render in ${w.tools[0]}.`]];
-const FR=w=>{const v=curV(w);return [1,2,3,4].map(i=>`<button class="fu" data-r style="--i:${i};--ar:${v.ar==='16/9'?'16/9':v.ar==='9/16'?'9/16':'1/2'}" data-a="lb" data-id="${w.id}" data-v="${i}" aria-label="Open frame ${i}"><img src="assets/f${v.c}-${i}.webp" alt="${esc(w.t)}, frame ${i}" loading="lazy"></button>`).join('')};
-const chips=p=>FILTERS.map(f=>`<button class="${p}-chip${S.filter===f.k?' on':''}" data-a="filter" data-v="${f.k}" aria-pressed="${S.filter===f.k}">${f.l}<sup>${cnt(f.k)}</sup></button>`).join('');
-const EMPTY=()=>`<div class="x-empty"><p class="x-empty-t">No works published yet</p><p class="mut">New cases are on the way. Meanwhile, the showreel is ready to watch.</p><div class="x-empty-b"><button data-a="reel">Watch showreel</button><button data-a="jump" data-v="contact">Get in touch</button></div></div>`;
+<div class="x-pl-err"><p>${t('pl.err')}</p><button class="x-btn-s" data-a="pl-retry">${t('pl.retry')}</button></div></div>`}
+function PL(w,ctx){const v=curV(w),hq=HQ.has(v.c);return plHTML({id:`pl-${ctx}-${v.c}`,ar:v.ar,vert:v.ar!=='16/9',src:`assets/v${v.c}.mp4`,webm:hq?`assets/w${v.c}.webm`:'',d:v.d,poster:`assets/${hq?'h':'c'}${v.c}.webp`,alt:`${wt(w)} — ${t('po')}`,big:t('pl.play'),cursor:t('cur.play'),mute:1})}
+const TABS=w=>w.v.length<2?'':`<div class="x-tabs" role="tablist">${w.v.map((v,i)=>`<button role="tab" aria-selected="${i===S.vi}" class="${i===S.vi?'on':''}" data-a="tab" data-v="${i}">${tr(v.l)}<span class="mono">${v.d}</span></button>`).join('')}</div>`;
+const meta=w=>[[t('m.event'),w.ev],[t('m.studio'),w.studio],[t('m.role'),tr(w.role)],[t('m.year'),w.year],[t('m.format'),w.v.map(v=>v.r).join(' / ')],[t('m.dur'),w.v.map(v=>v.d).join(' / ')],[t('m.tools'),w.tools.join(', ')]].filter(x=>x[1]);
+const txt=w=>w.brief?[[t('brief'),tr(w.brief)],[t('sol'),tr(w.sol)]].concat(w.res?[[t('res'),tr(w.res)]]:[]):[[t('did'),w.tools.length>1?t('did2',{a:w.tools[0],b:w.tools[1]}):t('did1',{a:w.tools[0]})]];
+const FR=w=>{const v=curV(w);return [1,2,3,4].map(i=>`<button class="fu" data-r style="--i:${i};--ar:${v.ar==='16/9'?'16/9':v.ar==='9/16'?'9/16':'1/2'}" data-a="lb" data-id="${w.id}" data-v="${i}" aria-label="${t('frame',{n:i})}"><img src="assets/f${v.c}-${i}.webp" alt="${esc(wt(w))}, ${t('fr')} ${i}" loading="lazy"></button>`).join('')};
+const chips=p=>FILTERS.map(f=>`<button class="${p}-chip${S.filter===f.k?' on':''}" data-a="filter" data-v="${f.k}" aria-pressed="${S.filter===f.k}">${tr(f.l)}<sup>${cnt(f.k)}</sup></button>`).join('');
+const EMPTY=()=>`<div class="x-empty"><p class="x-empty-t">${t('e.t')}</p><p class="mut">${t('e.p')}</p><div class="x-empty-b"><button data-a="reel">${t('e.reel')}</button><button data-a="jump" data-v="contact">${t('e.touch')}</button></div></div>`;
 const navL=(v,l,extra='')=>`<a class="ul" href="${href(v)}" data-a="nav" data-v="${v}">${l}${extra}</a>`;
 const jmp=(v,l)=>`<a class="ul" href="#${v}" data-a="jump" data-v="${v}">${l}</a>`;
-const menuBtn=()=>`<button class="hd-menu" data-a="menu" aria-expanded="false" aria-controls="menu">Menu</button>`;
+const menuBtn=()=>`<button class="hd-menu" data-a="menu" aria-expanded="false" aria-controls="menu">${t('menu')}</button>`;
 const lk=c=>c.h.startsWith('mailto:')?`href="${c.h}" data-a="mail"`:`href="${c.h}" target="_blank" rel="noopener"`;
-const contactLinks=(cls,fmt)=>CONTACTS.map(c=>fmt(c)).join('');
+const chev=sv('<path d="m6 9 6 6 6-6"/>');
+const langSel=()=>`<div class="b-lang"><button class="b-lang-b" data-a="lang-t" aria-haspopup="listbox" aria-expanded="false" aria-label="${t('lang')}: ${LANGS.find(l=>l.k===LANG).n}">${langLabel()}${chev}</button><ul class="b-lang-m" role="listbox" aria-label="${t('lang')}">${LANGS.map(l=>`<li><button role="option" aria-selected="${l.k===LANG}" data-a="lang" data-v="${l.k}" lang="${l.k}"><span>${l.l}</span><span class="mut">${l.n}</span><i class="b-lang-dot"></i></button></li>`).join('')}</ul></div>`;
 
 /* ================= B · INDEX ================= */
-const bHd=()=>`<header class="hd b-hd"><a class="b-logo" href="${href('home')}" data-a="nav" data-v="home">Maksim Alekseev</a><span class="hd-x b-hd-mid"><span>Motion &amp; 3D/VFX</span><span class="mut">Kraków <span data-clock></span></span></span><nav class="hd-nav">${navL('works',`Works <span class="mut">(${WORKS.length})</span>`)}${jmp('about','About')}${jmp('contact','Contact')}</nav><button class="b-tg" data-a="theme" aria-label="Switch to dark theme" title="Theme"><span class="i-moon">${I.moon}</span><span class="i-sun">${I.sun}</span></button>${menuBtn()}</header>`;
-const bRow=(w,i)=>`<a class="b-row fu" data-r style="--i:${i}" href="${href('work',w.id)}" data-a="open" data-id="${w.id}"><span class="mono mut">${w.n}</span><span class="b-th"><img src="assets/c${w.cover}.webp" alt="" loading="lazy"></span><h3>${esc(w.t)}</h3><span class="mut">${esc(w.s)}</span><span class="mut b-tools">${w.tools.join(', ')}</span>${I.arr}<div class="b-rx" aria-hidden="true"><div class="b-rx-in"><div class="b-rx-m${isV(w)?' v':''}">${M(w,'brx')}</div><div class="b-rx-t"><p>${esc(w.ov)}</p><span class="mono mut">${w.v.map(v=>v.r+' · '+v.d).join(' / ')}</span><span class="b-rx-go">View case ${I.right}</span></div></div></div></a>`;
+const bHd=()=>`<header class="hd b-hd"><a class="b-logo" href="${href('home')}" data-a="nav" data-v="home">${t('name')}</a><span class="hd-x b-hd-mid"><span>Motion &amp; 3D/VFX</span><span class="mut">${t('city')} <span data-clock></span></span></span><nav class="hd-nav">${navL('works',`${t('nav.works')} <span class="mut">(${WORKS.length})</span>`)}${jmp('about',t('nav.about'))}${jmp('contact',t('nav.contact'))}</nav><button class="b-tg" data-a="theme" aria-label="${isDark()?t('theme.light'):t('theme.dark')}"><span class="i-moon">${I.moon}</span><span class="i-sun">${I.sun}</span></button>${langSel()}${menuBtn()}</header>`;
+const bRow=(w,i)=>`<a class="b-row fu" data-r style="--i:${i}" href="${href('work',w.id)}" data-a="open" data-id="${w.id}"><span class="mono mut">${w.n}</span><span class="b-th"><img src="assets/c${w.cover}.webp" alt="" loading="lazy"></span><h3>${esc(wt(w))}</h3><span class="mut">${esc(tr(w.s))}</span><span class="mut b-tools">${w.tools.join(', ')}</span>${I.arr}<div class="b-rx" aria-hidden="true"><div class="b-rx-in"><div class="b-rx-m${isV(w)?' v':''}">${M(w,'brx')}</div><div class="b-rx-t"><p>${esc(tr(w.ov))}</p><span class="mono mut">${w.v.map(v=>v.r+' · '+v.d).join(' / ')}</span><span class="b-rx-go">${t('case')} ${I.right}</span></div></div></div></a>`;
 const bIx=a=>a.length?`<div class="b-ix">${a.map(bRow).join('')}</div>`:EMPTY();
-function bCta(){return `<section class="b-cta" id="contact"><span class="mono mut fu" data-r>(06) Contact</span><h2 class="rv" data-r style="margin-top:20px">${L('Let’s get|<em class="b-serif">in touch.</em>')}</h2><div class="b-cta-row"><div class="fu" data-r><p class="mut" style="max-width:360px">Open to full-time roles in Kraków and remote projects worldwide.</p><button class="b-btn ghost" data-a="toast" data-v="This would download the CV as a PDF.">Download CV${I.arr}</button></div><div class="b-links">${CONTACTS.map((c,i)=>`<a class="fu" data-r style="--i:${i}" ${lk(c)}><span class="mono mut">${c.l}</span><b>${esc(c.v)}</b>${I.arr}</a>`).join('')}</div></div></section><footer class="b-foot"><span>© 2026 Maksim Alekseev</span><span class="mut"><i class="dot"></i>Available for new projects · Kraków <span data-clock></span></span><button class="ul" data-a="top">Back to top ↑</button></footer>`}
+function bCta(){return `<section class="b-cta" id="contact"><span class="mono mut fu" data-r>${t('sec.ct')}</span><h2 class="rv" data-r style="margin-top:20px">${L(t('h.ct'))}</h2><div class="b-cta-row"><div class="fu" data-r><p class="mut" style="max-width:360px">${t('ct.p')}</p><button class="b-btn ghost" data-a="toast" data-v="${t('cv.t')}">${t('cv')}${I.arr}</button></div><div class="b-links">${CONTACTS.map((c,i)=>`<a class="fu" data-r style="--i:${i}" ${lk(c)}><span class="mono mut">${tr(c.l)}</span><b>${esc(tr(c.v))}</b>${I.arr}</a>`).join('')}</div></div></section><footer class="b-foot"><span>© 2026 ${t('name')}</span><span class="mut"><i class="dot"></i>${t('f.avail')} · ${t('city')} <span data-clock></span></span><button class="ul" data-a="top">${t('top')}</button></footer>`}
 const B_V={
 home(){return `${bHd()}<main>
-<section class="b-hero"><div class="b-avail fu" data-r><i class="dot"></i>Available for new projects · Kraków &amp; remote</div><h1 class="b-name rv" data-r>${L('<span data-fit>Maksim Alekseev</span>')}</h1>
- <div class="b-intro"><p class="fu" data-r style="--i:2">Motion designer and 3D/VFX artist — <em class="b-serif">from the first sketch to the final render.</em></p><div class="b-intro-r fu" data-r style="--i:3"><p class="mut">4+ years · 5 studios · 100+ projects. Media facades, product films, explainers and trailers.</p><a class="b-btn" href="${href('works')}" data-a="nav" data-v="works">View works${I.arr}</a></div></div></section>
-<section class="b-reel-w"><button class="b-reel fu" data-r data-a="reel" data-cursor="Play reel" aria-label="Play showreel">${AMB('reel','creel')}<span class="b-reel-lab"><span class="b-reel-p">${I.play}</span>Showreel <em class="b-serif">2026</em></span><span class="b-reel-d mono">0:29</span></button></section>
-<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>(01) Selected work</span><h2 class="rv" data-r>${L('Things I’ve|<em class="b-serif">made move</em>')}</h2></div>${bIx(S.empty?[]:WORKS.slice(0,6))}${S.empty?'':`<a class="b-more fu" data-r href="${href('works')}" data-a="nav" data-v="works">All works (${WORKS.length})${I.right}</a>`}</section>
-<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>(02) Services</span><h2 class="rv" data-r>${L('What I <em class="b-serif">do</em>')}</h2></div><div class="b-svc">${SVC.map((s,i)=>{const id='bsvc:'+i,o=S.open[id];return `<div class="b-svc-i x-acc${o?' open':''} fu" data-r style="--i:${i}"><button class="b-svc-h" data-a="acc" data-id="${id}" aria-expanded="${!!o}"><span class="mono mut">${s.n}</span><span class="x-pm"></span><h3>${s.t}</h3><p>${s.d}</p></button><div class="x-acc-b"><div><div class="b-svc-c x-acc-in"><ul>${s.b.map(b=>`<li>${b}</li>`).join('')}</ul></div></div></div></div>`}).join('')}</div></section>
-<section class="b-sec" id="about"><div class="b-why"><span class="mono mut fu" data-r>(03) About</span><div><h2 class="rv" data-r>${L('Every frame is|<em class="b-serif">built on purpose.</em>')}</h2><p class="b-why-p fu" data-r>${ABOUT}</p></div></div>
- <div class="b-stats">${STATS.map((s,i)=>`<div class="fu" data-r style="--i:${i}"><b><span data-count="${s.n}">0</span>${s.s}</b>${s.h?`<a class="b-lnk" href="${s.h}" target="_blank" rel="noopener"><span>${s.l}</span>${I.arr}</a>`:`<span>${s.l}</span>`}</div>`).join('')}</div>
- <div class="b-tools-w"><span class="mono mut fu" data-r>Toolkit</span><div style="display:grid;gap:20px">${TOOLS.map(g=>`<div class="fu" data-r><p class="mut" style="margin-bottom:10px;font-size:14px">${g.g}</p><ul>${g.i.map(t=>`<li>${t}</li>`).join('')}</ul></div>`).join('')}</div></div></section>
-<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>(04) Experience</span><h2 class="rv" data-r>${L('Where I’ve <em class="b-serif">worked</em>')}</h2></div><ul class="b-exp">${EXP.map((e,i)=>`<li class="fu" data-r style="--i:${i}"><span class="mut">${e.p}</span><b>${e.c}</b><span>${e.r}</span><span class="mut">${e.d}</span></li>`).join('')}</ul></section>
-<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>(05) FAQ</span><h2 class="rv" data-r>${L('Any <em class="b-serif">questions?</em>')}</h2></div><div class="b-faq">${FAQ.map((q,i)=>{const id='bfaq:'+i,o=S.open[id];return `<div class="x-acc${o?' open':''} fu" data-r><button class="b-faq-h" data-a="acc" data-id="${id}" data-g="bfaq" aria-expanded="${!!o}">${q.q}<span class="x-pm"></span></button><div class="x-acc-b"><div><p class="b-faq-a x-acc-in">${q.a}</p></div></div></div>`}).join('')}</div></section>
+<section class="b-hero"><div class="b-avail fu" data-r><i class="dot"></i>${t('hero.avail')}</div><h1 class="b-name rv" data-r>${L(`<span data-fit>${t('name')}</span>`)}</h1>
+ <div class="b-intro"><p class="fu" data-r style="--i:2">${t('hero.intro')}</p><div class="b-intro-r fu" data-r style="--i:3"><p class="mut">${t('hero.sub')}</p><a class="b-btn" href="${href('works')}" data-a="nav" data-v="works">${t('hero.cta')}${I.arr}</a></div></div></section>
+<section class="b-reel-w"><button class="b-reel fu" data-r data-a="reel" data-cursor="${t('cur.reel')}" aria-label="${t('reel.play')}">${AMB('reel','creel')}<span class="b-reel-lab"><span class="b-reel-p">${I.play}</span>${t('reel')} <em class="b-serif">2026</em></span><span class="b-reel-d mono">0:29</span></button></section>
+<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>${t('sec.sel')}</span><h2 class="rv" data-r>${L(t('h.sel'))}</h2></div>${bIx(S.empty?[]:WORKS.slice(0,6))}${S.empty?'':`<a class="b-more fu" data-r href="${href('works')}" data-a="nav" data-v="works">${t('all')} (${WORKS.length})${I.right}</a>`}</section>
+<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>${t('sec.svc')}</span><h2 class="rv" data-r>${L(t('h.svc'))}</h2></div><div class="b-svc">${SVC.map((s,i)=>{const id='bsvc:'+i,o=S.open[id];return `<div class="b-svc-i x-acc${o?' open':''} fu" data-r style="--i:${i}"><button class="b-svc-h" data-a="acc" data-id="${id}" aria-expanded="${!!o}"><span class="mono mut">${s.n}</span><span class="x-pm"></span><h3>${tr(s.t)}</h3><p>${tr(s.d)}</p></button><div class="x-acc-b"><div><div class="b-svc-c x-acc-in"><ul>${s.b.map(b=>`<li>${tr(b)}</li>`).join('')}</ul></div></div></div></div>`}).join('')}</div></section>
+<section class="b-sec" id="about"><div class="b-why"><span class="mono mut fu" data-r>${t('sec.about')}</span><div><h2 class="rv" data-r>${L(t('h.about'))}</h2><p class="b-why-p fu" data-r>${tr(ABOUT)}</p></div></div>
+ <div class="b-stats">${STATS.map((s,i)=>`<div class="fu" data-r style="--i:${i}"><b><span data-count="${s.n}">0</span>${tr(s.s)}</b>${s.h?`<a class="b-lnk" href="${s.h}" target="_blank" rel="noopener"><span>${tr(s.l)}</span>${I.arr}</a>`:`<span>${tr(s.l)}</span>`}</div>`).join('')}</div>
+ <div class="b-tools-w"><span class="mono mut fu" data-r>${t('toolkit')}</span><div style="display:grid;gap:20px">${TOOLS.map(g=>`<div class="fu" data-r><p class="mut" style="margin-bottom:10px;font-size:14px">${tr(g.g)}</p><ul>${g.i.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div></div></section>
+<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>${t('sec.exp')}</span><h2 class="rv" data-r>${L(t('h.exp'))}</h2></div><ul class="b-exp">${EXP.map((e,i)=>`<li class="fu" data-r style="--i:${i}"><span class="mut">${period(e)}</span><b>${tr(e.c)}</b><span>${tr(e.r)}</span><span class="mut">${dur(e.m)}</span></li>`).join('')}</ul></section>
+<section class="b-sec"><div class="b-sh"><span class="mono mut fu" data-r>${t('sec.faq')}</span><h2 class="rv" data-r>${L(t('h.faq'))}</h2></div><div class="b-faq">${FAQ.map((q,i)=>{const id='bfaq:'+i,o=S.open[id];return `<div class="x-acc${o?' open':''} fu" data-r><button class="b-faq-h" data-a="acc" data-id="${id}" data-g="bfaq" aria-expanded="${!!o}">${tr(q.q)}<span class="x-pm"></span></button><div class="x-acc-b"><div><p class="b-faq-a x-acc-in">${tr(q.a)}</p></div></div></div>`}).join('')}</div></section>
 ${bCta()}</main>`},
-works(){const L2=list();const body=!L2.length?EMPTY():S.layout==='grid'?`<div class="b-grid">${L2.map((w,i)=>`<a class="b-gc hov fu" data-r style="--i:${i}" href="${href('work',w.id)}" data-a="open" data-id="${w.id}" data-hp data-cursor="View">${M(w,'bg',{ar:'4/3'})}<h3>${esc(w.t)}</h3><p class="mut"><span>${esc(w.s)}</span><span>${w.n}</span></p></a>`).join('')}</div>`:bIx(L2);
-return `${bHd()}<main><section class="b-wh"><p class="mono mut fu" data-r>Index · 2021 — 2026</p><h1 class="rv" data-r>${L(`Works<sup>(${cnt('all')})</sup>`)}</h1><div class="b-ctrl fu" data-r><div class="b-chips" role="group" aria-label="Filter works">${chips('b')}</div><div class="b-seg" role="group" aria-label="Layout"><button class="${S.layout==='list'?'on':''}" data-a="layout" data-v="list" aria-pressed="${S.layout==='list'}">List</button><button class="${S.layout==='grid'?'on':''}" data-a="layout" data-v="grid" aria-pressed="${S.layout==='grid'}">Grid</button></div></div></section><section class="b-wl" data-list>${body}</section>${bCta()}</main>`},
+works(){const L2=list();const body=!L2.length?EMPTY():S.layout==='grid'?`<div class="b-grid">${L2.map((w,i)=>`<a class="b-gc hov fu" data-r style="--i:${i}" href="${href('work',w.id)}" data-a="open" data-id="${w.id}" data-hp data-cursor="${t('cur.view')}">${M(w,'bg',{ar:'4/3'})}<h3>${esc(wt(w))}</h3><p class="mut"><span>${esc(tr(w.s))}</span><span>${w.n}</span></p></a>`).join('')}</div>`:bIx(L2);
+return `${bHd()}<main><section class="b-wh"><p class="mono mut fu" data-r>${t('w.kick')}</p><h1 class="rv" data-r>${L(`${t('nav.works')}<sup>(${cnt('all')})</sup>`)}</h1><div class="b-ctrl fu" data-r><div class="b-chips" role="group" aria-label="${t('f.aria')}">${chips('b')}</div><div class="b-seg" role="group" aria-label="${t('l.aria')}"><button class="${S.layout==='list'?'on':''}" data-a="layout" data-v="list" aria-pressed="${S.layout==='list'}">${t('list')}</button><button class="${S.layout==='grid'?'on':''}" data-a="layout" data-v="grid" aria-pressed="${S.layout==='grid'}">${t('grid')}</button></div></div></section><section class="b-wl" data-list>${body}</section>${bCta()}</main>`},
 work(w){const n=nxt(w),p=prv(w);return `${bHd()}<main><section class="b-wk">
-<div class="b-crumb mono mut fu" data-r><a class="ul" href="${href('works')}" data-a="nav" data-v="works">Works</a><span>/</span><span>${w.n}</span></div>
-<div class="b-wk-top"><div>${w.award?`<div class="b-awr fu" data-r><span class="b-aw">🏆 ${w.award}</span>${w.proof?`<a class="b-lnk" href="${w.proof}" target="_blank" rel="noopener"><span>Watch the award on YouTube</span>${I.arr}</a>`:''}</div>`:''}<h1 class="rv" data-r>${L(w.tl)}</h1></div><div class="b-mt fu" data-r>${meta(w).map(([k,v])=>`<div><span class="mut">${k}</span><span>${esc(v)}</span></div>`).join('')}</div></div>
+<div class="b-crumb mono mut fu" data-r><a class="ul" href="${href('works')}" data-a="nav" data-v="works">${t('nav.works')}</a><span>/</span><span>${w.n}</span></div>
+<div class="b-wk-top"><div>${w.award?`<div class="b-awr fu" data-r><span class="b-aw">🏆 ${tr(w.award)}</span>${w.proof?`<a class="b-lnk" href="${w.proof}" target="_blank" rel="noopener"><span>${t('yt')}</span>${I.arr}</a>`:''}</div>`:''}<h1 class="rv" data-r>${L(tr(w.tl))}</h1></div><div class="b-mt fu" data-r>${meta(w).map(([k,v])=>`<div><span class="mut">${k}</span><span>${esc(v)}</span></div>`).join('')}</div></div>
 <div class="b-wk-pl fu" data-r>${TABS(w)}${PL(w,'b')}</div>
-<p class="b-lead fu" data-r>${esc(w.ov)}</p>
+<p class="b-lead fu" data-r>${esc(tr(w.ov))}</p>
 <div class="b-cols">${txt(w).map(([k,v],i)=>`<div class="fu" data-r style="--i:${i}"><h4>${k}</h4><p>${esc(v)}</p></div>`).join('')}</div>
 <div class="b-frames">${FR(w)}</div>
-<nav class="b-pn" aria-label="More work"><a href="${href('work',p.id)}" data-a="open" data-id="${p.id}"><span class="mono mut">← Previous · ${p.n}</span><b>${esc(p.t)}</b></a><a href="${href('work',n.id)}" data-a="open" data-id="${n.id}"><span class="mono mut">Next · ${n.n} →</span><b>${esc(n.t)}</b></a></nav>
+<nav class="b-pn" aria-label="${t('more')}"><a href="${href('work',p.id)}" data-a="open" data-id="${p.id}"><span class="mono mut">${t('prev')} · ${p.n}</span><b>${esc(wt(p))}</b></a><a href="${href('work',n.id)}" data-a="open" data-id="${n.id}"><span class="mono mut">${n.n} · ${t('next')}</span><b>${esc(wt(n))}</b></a></nav>
 </section>${bCta()}</main>`}
 };
 
@@ -509,7 +697,7 @@ const VIEWS={b:B_V};
 /* ---------- render ---------- */
 const app=$('#app');
 function view(){const V=VIEWS[S.dir];return S.view==='work'?V.work(W(S.id)):V[S.view]()}
-function menuHTML(){return `<nav aria-label="Menu">${[['home','Home','nav'],['works','Works','nav'],['about','About','jump'],['contact','Contact','jump']].map(([v,l,a],i)=>`<a class="mn-l" style="--i:${i}" href="${a==='nav'?href(v):'#'+v}" data-a="${a}" data-v="${v}"><span>${l}</span></a>`).join('')}</nav><div class="mn-c">${CONTACTS.map(c=>`<a class="mono" ${lk(c)}>${c.l}</a>`).join('')}</div>`}
+function menuHTML(){return `<nav aria-label="Menu">${[['home',t('nav.home'),'nav'],['works',t('nav.works'),'nav'],['about',t('nav.about'),'jump'],['contact',t('nav.contact'),'jump']].map(([v,l,a],i)=>`<a class="mn-l" style="--i:${i}" href="${a==='nav'?href(v):'#'+v}" data-a="${a}" data-v="${v}"><span>${l}</span></a>`).join('')}</nav><div class="mn-c">${CONTACTS.map(c=>`<a class="mono" ${lk(c)}>${tr(c.l)}</a>`).join('')}</div>`}
 function render(full){
  root.classList.remove('dA','dB','dC');root.classList.add('d'+S.dir.toUpperCase());
  const html=view();
@@ -556,31 +744,41 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)$$('video')
 /* player */
 const fmt=s=>{s=Math.max(0,Math.floor(s||0));return Math.floor(s/60)+':'+pad(s%60)};
 function plOf(el){return el&&el.closest('.x-pl')}
-function plToggle(p){const v=$('.x-pl-v',p);if(!v._init){v._init=1;if(p.dataset.webm)v.innerHTML=`<source src="${p.dataset.webm}" type='video/webm; codecs="vp9, opus"'><source src="${p.dataset.src}" type="video/mp4">`;else v.src=p.dataset.src;v.load();p.classList.add('loading')}if(v.paused){stopPrev();$$('.x-pl-v').forEach(x=>{if(x!==v)x.pause()});p.classList.add('started');curLab=null;cur.classList.remove('big');curL.textContent='';v.play().catch(()=>{})}else v.pause()}
-['play','playing','pause','ended','waiting','canplay','timeupdate','error','volumechange'].forEach(t=>document.addEventListener(t,e=>{const v=e.target;if(!(v instanceof HTMLVideoElement)||!v.classList.contains('x-pl-v'))return;const p=plOf(v);if(!p)return;
+function plInit(p){const v=$('.x-pl-v',p);if(v._init)return v;v._init=1;if(p.dataset.webm)v.innerHTML=`<source src="${p.dataset.webm}" type='video/webm; codecs="vp9, opus"'><source src="${p.dataset.src}" type="video/mp4">`;else v.src=p.dataset.src;v.preload='auto';v.load();p.classList.add('loading');return v}
+function plToggle(p){const v=plInit(p);if(v.paused){stopPrev();$$('.x-pl-v').forEach(x=>{if(x!==v)x.pause()});p.classList.add('started');curLab=null;cur.classList.remove('big');curL.textContent='';v.play().catch(()=>{})}else v.pause()}
+const dSec=p=>{const v=$('.x-pl-v',p);if(v.duration&&isFinite(v.duration))return v.duration;const m=(p.dataset.d||'0:00').split(':');return (+m[0])*60+(+m[1]||0)};
+function paint(p,r){const tr=$('.x-pl-tr',p);tr.style.setProperty('--r',r.toFixed(4));tr.setAttribute('aria-valuenow',Math.round(r*100));$('.x-pl-t',p).textContent=`${fmt(r*dSec(p))} / ${fmt(dSec(p))}`}
+['play','playing','pause','ended','waiting','canplay','timeupdate','error','volumechange','loadedmetadata','seeked'].forEach(t=>document.addEventListener(t,e=>{const v=e.target;if(!(v instanceof HTMLVideoElement)||!v.classList.contains('x-pl-v'))return;const p=plOf(v);if(!p)return;
  switch(e.type){case'play':p.classList.add('playing');p.classList.remove('err');idle(p);break;case'playing':case'canplay':p.classList.remove('loading');break;case'waiting':p.classList.add('loading');break;case'pause':case'ended':p.classList.remove('playing','idle');break;case'error':p.classList.add('err');p.classList.remove('loading','playing');break;case'volumechange':p.classList.toggle('muted',v.muted);break;
- case'timeupdate':{const r=v.duration?v.currentTime/v.duration:0;$('.x-pl-tr b',p).style.transform=`scaleX(${r})`;$('.x-pl-tr',p).setAttribute('aria-valuenow',Math.round(r*100));$('.x-pl-t',p).textContent=`${fmt(v.currentTime)} / ${fmt(v.duration)}`}}},true));
+ case'loadedmetadata':if(p._seek!=null){v.currentTime=p._seek*v.duration;p._seek=null}break;
+ case'seeked':case'timeupdate':{if(p===seekP||p._seek!=null)break;paint(p,v.duration?v.currentTime/v.duration:0)}}},true));
 document.addEventListener('error',e=>{const t=e.target;if(t&&t.tagName==='SOURCE'&&!t.nextElementSibling){const p=t.closest('.x-pl');if(p){p.classList.add('err');p.classList.remove('loading','playing')}}},true);
 function idle(p){clearTimeout(p._t);p.classList.remove('idle');p._t=setTimeout(()=>p.classList.add('idle'),2200)}
 document.addEventListener('pointermove',e=>{const p=plOf(e.target);if(p&&p.classList.contains('playing'))idle(p)},{passive:true});
 let seekP=null;
-function seekTo(p,x){const tr=$('.x-pl-tr',p),r=tr.getBoundingClientRect(),v=$('.x-pl-v',p);if(!v.duration)return;v.currentTime=clamp((x-r.left)/r.width)*v.duration}
-document.addEventListener('pointerdown',e=>{const tr=e.target.closest('.x-pl-tr');if(!tr)return;seekP=plOf(tr);tr.setPointerCapture(e.pointerId);seekTo(seekP,e.clientX)});
-document.addEventListener('pointermove',e=>{if(seekP)seekTo(seekP,e.clientX)},{passive:true});
-document.addEventListener('pointerup',()=>{seekP=null});
+const trFrac=(tr,x)=>{const r=$('i',tr).getBoundingClientRect();return clamp((x-r.left)/r.width)};
+/* seek: paint at once; if the video has no metadata yet, start it and seek when it arrives */
+function seekTo(p,x){const tr=$('.x-pl-tr',p),f=trFrac(tr,x),v=$('.x-pl-v',p);paint(p,f);tr.style.setProperty('--h',f.toFixed(4));
+ if(!v.duration||!isFinite(v.duration)){p._seek=f;if(!v._init||v.paused)plToggle(p);return}
+ const t0=f*v.duration;if(typeof v.fastSeek==='function'&&seekP)v.fastSeek(t0);else v.currentTime=t0}
+function hoverTr(tr,x){const p=plOf(tr),f=trFrac(tr,x);tr.style.setProperty('--h',f.toFixed(4));$('.x-pl-tip',tr).textContent=fmt(f*dSec(p))}
+document.addEventListener('pointerdown',e=>{const tr=e.target.closest('.x-pl-tr');if(!tr)return;e.preventDefault();seekP=plOf(tr);tr.classList.add('drag');try{tr.setPointerCapture(e.pointerId)}catch(_){}hoverTr(tr,e.clientX);seekTo(seekP,e.clientX)});
+document.addEventListener('pointermove',e=>{if(seekP){const tr=$('.x-pl-tr',seekP);hoverTr(tr,e.clientX);seekTo(seekP,e.clientX);return}const tr=e.target.closest&&e.target.closest('.x-pl-tr');if(tr)hoverTr(tr,e.clientX)},{passive:true});
+const endSeek=()=>{if(!seekP)return;const p=seekP,v=$('.x-pl-v',p),tr=$('.x-pl-tr',p);tr.classList.remove('drag');seekP=null;if(v.duration&&p._seek==null){const f=parseFloat(tr.style.getPropertyValue('--r'))||0;v.currentTime=f*v.duration}};
+document.addEventListener('pointerup',endSeek);document.addEventListener('pointercancel',endSeek);
 document.addEventListener('keydown',e=>{const tr=e.target.closest&&e.target.closest('.x-pl-tr');if(tr&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){const v=$('.x-pl-v',plOf(tr));if(v.duration)v.currentTime=clamp(v.currentTime+(e.key==='ArrowRight'?5:-5),0,v.duration);e.preventDefault()}});
 
 /* ---------- modal / lightbox / toast / menu ---------- */
 const lb=$('#lb');let lbRet=null,lbState=null;
-function modal(html,label){lbRet=document.activeElement;lb.innerHTML=`<button class="x-ib lb-x" data-a="lb-x" aria-label="Close">${I.x}</button><div class="lb-in">${html}</div>`;lb.setAttribute('aria-label',label);lb.hidden=false;root.classList.add('lock');requestAnimationFrame(()=>lb.classList.add('open'));$('.lb-x',lb).focus()}
+function modal(html,label){lbRet=document.activeElement;lb.innerHTML=`<button class="x-ib lb-x" data-a="lb-x" aria-label="${t('lb.close')}">${I.x}</button><div class="lb-in">${html}</div>`;lb.setAttribute('aria-label',label);lb.hidden=false;root.classList.add('lock');requestAnimationFrame(()=>lb.classList.add('open'));$('.lb-x',lb).focus()}
 function closeModal(){if(lb.hidden)return;$$('video',lb).forEach(v=>v.pause());lb.classList.remove('open');lbState=null;setTimeout(()=>{if(!lb.classList.contains('open')){lb.hidden=true;lb.innerHTML=''}},160);root.classList.remove('lock');lbRet&&lbRet.focus&&lbRet.focus()}
 lb.addEventListener('click',e=>{if(e.target===lb)closeModal()});
-function openReel(){modal(`<div class="x-pl" style="--ar:16/9" data-src="assets/reel.mp4"><img class="x-pl-po" src="assets/creel.webp" alt="Showreel poster"><video class="x-pl-v" playsinline preload="none"></video><button class="x-pl-big" data-a="pl-toggle" aria-label="Play showreel">${I.play}</button><div class="x-pl-bar"><button class="x-ib" data-a="pl-toggle" aria-label="Play or pause"><span class="i-pl">${I.play}</span><span class="i-pa">${I.pause}</span></button><div class="x-pl-tr" role="slider" aria-label="Seek" tabindex="0"><i><b></b></i></div><span class="x-pl-t mono">0:00 / 0:29</span><button class="x-ib" data-a="pl-fs" aria-label="Full screen">${I.fs}</button></div><div class="x-pl-load"><i></i></div><div class="x-pl-err"><p>The video didn’t load.</p><button class="x-btn-s" data-a="pl-retry">Retry</button></div></div><div class="lb-nav"><span class="mono">Showreel 2026 · draft cut from the works below</span><span class="mono">0:29</span></div>`,'Showreel');plToggle($('.x-pl',lb))}
-function openLB(id,i){const w=W(id),v=curV(w);lbState={id,i};const show=()=>{const s=lbState;if(!s)return;$('.lb-in',lb).innerHTML=`<img src="assets/f${v.c}-${s.i}.webp" alt="${esc(w.t)}, frame ${s.i}"><div class="lb-nav"><button class="x-ib" data-a="lb-p" aria-label="Previous frame">${I.left}</button><span class="mono">${esc(w.t)} · ${s.i} / 4</span><button class="x-ib" data-a="lb-n" aria-label="Next frame">${I.right}</button></div>`};if(lb.hidden)modal('','Frames');show();lbState.show=show}
+function openReel(){modal(plHTML({id:'pl-reel',ar:'16/9',src:'assets/reel.mp4',webm:'assets/reel.webm',d:'0:29',poster:'assets/creel.webp',alt:t('reel.po'),big:t('reel.play')})+`<div class="lb-nav"><span class="mono">${t('reel.cap')}</span><span class="mono">0:29</span></div>`,t('reel'));plToggle($('.x-pl',lb))}
+function openLB(id,i){const w=W(id),v=curV(w);lbState={id,i};const show=()=>{const s=lbState;if(!s)return;$('.lb-in',lb).innerHTML=`<img src="assets/f${v.c}-${s.i}.webp" alt="${esc(wt(w))}, ${t('fr')} ${s.i}"><div class="lb-nav"><button class="x-ib" data-a="lb-p" aria-label="${t('lb.prev')}">${I.left}</button><span class="mono">${esc(wt(w))} · ${s.i} / 4</span><button class="x-ib" data-a="lb-n" aria-label="${t('lb.next')}">${I.right}</button></div>`};if(lb.hidden)modal('',t('lb.frames'));show();lbState.show=show}
 function lbStep(d){if(!lbState)return;const img=$('.lb-in img',lb);const go=()=>{lbState.i=(lbState.i+d+3)%4+1;lbState.show();const n=$('.lb-in img',lb);n.animate([{opacity:0},{opacity:1}],{duration:250,easing:E})};if(img&&!RM.matches)img.animate([{opacity:1},{opacity:0}],{duration:150,easing:'ease-in',fill:'forwards'}).finished.then(go);else go()}
 function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;const box=$('#toasts');box.append(t);while(box.children.length>3)box.firstChild.remove();setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),280)},3200)}
 const menu=$('#menu');
-function toggleMenu(force){const on=force!==undefined?force:!menu.classList.contains('open');menu.classList.toggle('open',on);menu.setAttribute('aria-hidden',!on);root.classList.toggle('lock',on);$$('.hd-menu').forEach(b=>{b.textContent=on?'Close':'Menu';b.setAttribute('aria-expanded',on)})}
+function toggleMenu(force){const on=force!==undefined?force:!menu.classList.contains('open');menu.classList.toggle('open',on);menu.setAttribute('aria-hidden',!on);root.classList.toggle('lock',on);$$('.hd-menu').forEach(b=>{b.textContent=on?t('close'):t('menu');b.setAttribute('aria-expanded',on)})}
 function closeMenu(){if(menu.classList.contains('open'))toggleMenu(false)}
 
 /* ---------- navigation ---------- */
@@ -591,7 +789,7 @@ function curtain(on,label){const cv=$('#cv');if(RM.matches){return Promise.resol
 async function go(view,id=null,cb){
  if(busy)return;closeMenu();
  if(view===S.view&&id===S.id){cb?cb():smoothTo(0);return}
- busy=true;curLab=null;cur.classList.remove('big');curL.textContent='';const label=view==='works'?'Works':view==='work'?W(id).t:'Home';
+ busy=true;curLab=null;cur.classList.remove('big');curL.textContent='';const label=view==='works'?t('nav.works'):view==='work'?wt(W(id)):t('nav.home');
  await curtain(true,label);
  S.view=view;S.id=id;S.vi=0;writeHash(true);S.hold=true;render(true);jumpTo(0);if(cb)cb(true);
  const out=curtain(false);setTimeout(()=>{S.hold=false;observeReveals()},RM.matches?0:380);await out;busy=false;
@@ -610,7 +808,9 @@ const A={
  filter:el=>{if(S.filter!==el.dataset.v)swapList(()=>{S.filter=el.dataset.v})},
  layout:el=>{if(S.layout!==el.dataset.v)swapList(()=>{S.layout=el.dataset.v})},
  acc:el=>{const id=el.dataset.id,g=el.dataset.g,was=!!S.open[id];if(g)Object.keys(S.open).forEach(k=>{if(k.startsWith(g+':'))delete S.open[k]});if(!was)S.open[id]=1;else delete S.open[id];render()},
- tab:el=>{$$('.x-pl-v',app).forEach(v=>v.pause());S.vi=+el.dataset.v;render()},
+ tab:el=>{if(S.vi===+el.dataset.v)return;$$('.x-pl-v',app).forEach(v=>v.pause());S.vi=+el.dataset.v;render()},
+ 'lang-t':el=>{const w=el.closest('.b-lang'),on=!w.classList.contains('open');closeLang();if(on){w.classList.add('open');el.setAttribute('aria-expanded','true');const sel=$('[aria-selected=true]',w);sel&&sel.focus({preventScroll:true})}},
+ lang:el=>setLang(el.dataset.v),
  'pl-toggle':el=>plToggle(plOf(el)),
  'pl-mute':el=>{const v=$('.x-pl-v',plOf(el));v.muted=!v.muted},
  'pl-fs':el=>{const p=plOf(el),v=$('.x-pl-v',p);if(document.fullscreenElement)document.exitFullscreen();else if(p.requestFullscreen)p.requestFullscreen().catch(()=>{});else if(v.webkitEnterFullscreen)v.webkitEnterFullscreen()},
@@ -620,7 +820,7 @@ const A={
  'lb-x':()=>closeModal(),'lb-p':()=>lbStep(-1),'lb-n':()=>lbStep(1),
  menu:()=>toggleMenu(),
  theme:()=>{setMode(isDark()?'light':'dark')},
- mail:el=>{const addr=el.getAttribute('href').replace(/^mailto:/,'');try{navigator.clipboard.writeText(addr).then(()=>toast('Address copied: '+addr),()=>{})}catch(_){}location.href=el.getAttribute('href')},
+ mail:el=>{const addr=el.getAttribute('href').replace(/^mailto:/,'');try{navigator.clipboard.writeText(addr).then(()=>toast(t('copied')+addr),()=>{})}catch(_){}location.href=el.getAttribute('href')},
  toast:el=>toast(el.dataset.v),
  top:()=>smoothTo(0),
  dir:el=>setDir(el.dataset.v),
@@ -628,7 +828,13 @@ const A={
  empty:()=>{S.empty=!S.empty;writeHash();if(S.device==='mobile')postFrame();else render();updTB()}
 };
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||!A[el.dataset.a])return;if(e.metaKey||e.ctrlKey)return;e.preventDefault();A[el.dataset.a](el,e)});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!lb.hidden)closeModal();else closeMenu()}if(!lb.hidden&&lbState){if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1)}});
+document.addEventListener('click',e=>{if(!e.target.closest('.b-lang'))closeLang()},true);
+function closeLang(){$$('.b-lang.open').forEach(w=>{w.classList.remove('open');$('.b-lang-b',w).setAttribute('aria-expanded','false')})}
+async function setLang(k){closeLang();if(!D[k]||k===LANG)return;try{localStorage.setItem('pf-lang',k)}catch(_){}
+ if(!RM.matches)await app.animate([{opacity:1},{opacity:0}],{duration:160,easing:'ease-in',fill:'forwards'}).finished;
+ LANG=k;applyLang();render();$('#menu').innerHTML=menuHTML();fitAll();app.getAnimations().forEach(a=>a.cancel());if(!RM.matches)app.animate([{opacity:0},{opacity:1}],{duration:320,easing:E})}
+function applyLang(){root.lang=LANG;document.title=t('title');const m=document.querySelector('meta[name=description]');if(m)m.content=t('desc')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('.b-lang.open')){closeLang();return}if(!lb.hidden)closeModal();else closeMenu()}if(!lb.hidden&&lbState){if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1)}});
 
 /* ---------- toolbar, device preview ---------- */
 const phf=null,stage=null,ph=null;
@@ -694,7 +900,7 @@ document.addEventListener('pointerout',e=>{const ix=e.target.closest('.b-ix');if
 const DQ=matchMedia('(prefers-color-scheme: dark)');
 let mode=null;try{mode=localStorage.getItem('pf-theme')}catch(_){}
 function isDark(){if(mode)return mode==='dark';const t=root.getAttribute('data-theme');if(t)return t==='dark';return DQ.matches}
-function applyMode(){if(mode)root.setAttribute('data-mode',mode);else root.removeAttribute('data-mode');const d=isDark();root.classList.toggle('dark',d);const m=document.querySelector('meta[name=theme-color]');if(m)m.content=d?'#121211':'#ECEAE4';$$('.b-tg').forEach(b=>b.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme'))}
+function applyMode(){if(mode)root.setAttribute('data-mode',mode);else root.removeAttribute('data-mode');const d=isDark();root.classList.toggle('dark',d);const m=document.querySelector('meta[name=theme-color]');if(m)m.content=d?'#121211':'#ECEAE4';$$('.b-tg').forEach(b=>b.setAttribute('aria-label',d?t('theme.light'):t('theme.dark')))}
 function setMode(m){mode=m;try{localStorage.setItem('pf-theme',m)}catch(_){}applyMode()}
 DQ.addEventListener('change',applyMode);
 new MutationObserver(applyMode).observe(root,{attributes:true,attributeFilter:['data-theme']});
@@ -706,7 +912,7 @@ setInterval(tickClock,15000);
 let rz;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{const wide=innerWidth>=820;if(wide!==S.wide){S.wide=wide;render()}fitAll();layout();if(S.device==='mobile')fitPhone();updTB()},120)},{passive:true});
 
 /* ---------- boot ---------- */
-window.__pfReady=1;readHash();writeHash();render(true);applyMode();requestAnimationFrame(tick);
+window.__pfReady=1;applyLang();readHash();writeHash();render(true);applyMode();requestAnimationFrame(tick);
 if(document.fonts)document.fonts.addEventListener('loadingdone',()=>{fitAll();layout()});
 })();
 </script>

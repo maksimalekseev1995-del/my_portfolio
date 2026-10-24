@@ -8,3 +8,4 @@ wrangler.toml
 .gitignore
 .assetsignore
 README.md
+worker.js

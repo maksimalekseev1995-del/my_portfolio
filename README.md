@@ -19,7 +19,13 @@ python3 -m http.server 8000
 | `assets/h*.webp` | Full-quality case posters |
 | `assets/p*.webm / .mp4` | 5 s silent preview loops for hover and autoplay |
 | `assets/c*.webp` | Covers · `assets/f*-1…4.webp` — full-quality frames for the case page and lightbox |
-| `assets/reel.*` | Draft showreel cut from the works |
+| `assets/reel.*` | Showreel 2026, 1080p, cut from the original renders |
+| `worker.js`, `wrangler.jsonc` | Cloudflare Worker that adds HTTP Range support to videos (needed for seeking) |
+| `og.png`, `favicon.ico`, `icon-*.png`, `apple-touch-icon.png`, `site.webmanifest` | Share image and MA monogram icons |
+
+## Languages
+
+EN (default), PL, UA, RU. The site picks the visitor's browser language on first visit, the header switch overrides it (saved in `localStorage` as `pf-lang`). Interface strings live in `D` in `index.html`; content fields in `WORKS`, `SVC`, `FAQ` etc. are `{en, pl, uk, ru}` objects.
 
 ## To update
 
@@ -32,4 +38,4 @@ python3 -m http.server 8000
 
 ## Deploy
 
-Works on GitHub Pages as is: Settings → Pages → Deploy from branch → `main` / root.
+Live on Cloudflare Workers (static assets): https://my-portfolio.maksim-alekseev-1995.workers.dev — every push to `main` redeploys via `npx wrangler deploy`. `wrangler.jsonc` runs `worker.js` first for `/assets/*` so videos answer Range requests with 206 — without it seeking breaks until the whole file has downloaded. `.assetsignore` keeps `.git` and other non-site files out of the upload (Workers reject any asset over 25 MiB, and the git pack is larger).
