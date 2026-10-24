@@ -346,7 +346,7 @@ ul,ol{list-style:none}
 :root{--sat:env(safe-area-inset-top,0px)}
 html.dB{background:var(--bg)}
 @media (max-width:759px),(pointer:coarse){
- .dB .hd,.dB .hd.solid{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+ .dB .hd,.dB .hd.solid{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none;pointer-events:auto}
  .dB .hd::before{content:'';position:absolute;left:0;right:0;bottom:100%;height:200px;background:inherit;pointer-events:none}
  .dB .hd::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);opacity:0;transition:opacity var(--d2)}
  .dB .hd.solid::after{opacity:1}
