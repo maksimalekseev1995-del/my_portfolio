@@ -39,3 +39,7 @@ EN (default), PL, UA, RU. The site picks the visitor's browser language on first
 ## Deploy
 
 Live on Cloudflare Workers (static assets): https://my-portfolio.maksim-alekseev-1995.workers.dev — every push to `main` redeploys via `npx wrangler deploy`. `wrangler.jsonc` runs `worker.js` first for `/assets/*` so videos answer Range requests with 206 — without it seeking breaks until the whole file has downloaded. `.assetsignore` keeps `.git` and other non-site files out of the upload (Workers reject any asset over 25 MiB, and the git pack is larger).
+
+## Rules
+
+- **Mobile header and iOS Safari.** On phones the fixed header must have an opaque background in the page colour and `pointer-events: auto`. Safari (iOS 26) tints the area under the status bar from the fixed element it finds at the top edge by hit-testing; with `pointer-events: none` it skips the header and the page shows through while scrolling.
